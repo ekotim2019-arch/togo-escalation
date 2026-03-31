@@ -13,7 +13,7 @@ const nodes = [
 
 export default function IntelCollapseSlide() {
   return (
-    <div className="w-full h-full flex flex-col bg-slate">
+    <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink">
       {/* Header */}
       <motion.div
         className="px-16 pt-10 pb-4 shrink-0"
@@ -22,10 +22,11 @@ export default function IntelCollapseSlide() {
         transition={{ duration: 0.5 }}
       >
         <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 03 — The Problem</div>
-        <h2 className="text-3xl font-bold text-paper">Intelligence Collapse</h2>
+        <h2 className="slide-title text-paper">Intelligence Collapse</h2>
+        <div className="accent-line mt-3" />
       </motion.div>
 
-      <div className="flex-1 flex gap-10 px-16 pb-16 min-h-0">
+      <div className="flex-1 flex gap-10 px-16 pb-12 min-h-0">
         {/* Network diagram */}
         <motion.div
           className="flex-1 relative"
@@ -131,20 +132,20 @@ export default function IntelCollapseSlide() {
 
         {/* Right: Key facts */}
         <motion.div
-          className="w-72 flex flex-col gap-4 shrink-0"
+          className="w-76 flex flex-col gap-4 shrink-0"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <div className="bg-threat-critical/10 border border-threat-critical/30 rounded-lg p-5">
-            <div className="text-threat-critical text-xs font-bold tracking-widest mb-3 uppercase">AES–ECOWAS Split</div>
+          <div className="card-danger">
+            <div className="text-threat-critical text-xs font-black tracking-widest mb-3 uppercase">AES–ECOWAS Split</div>
             <p className="text-paper/80 text-sm leading-relaxed italic">
               &ldquo;...crippled the region&rsquo;s ability to share intelligence and coordinate cross-border operations.&rdquo;
             </p>
           </div>
 
-          <div className="bg-slate border border-ash/20 rounded-lg p-5">
-            <div className="text-ash text-xs font-bold tracking-widest mb-3 uppercase">AES Position (Official)</div>
+          <div className="bg-slate/60 border border-ash/20 rounded-xl p-5">
+            <div className="text-ash text-xs font-black tracking-widest mb-3 uppercase">AES Position (Official)</div>
             <p className="text-paper/80 text-sm leading-relaxed italic">
               &ldquo;No intention to extend [security] operations to coastal countries&rdquo;
             </p>
@@ -153,8 +154,8 @@ export default function IntelCollapseSlide() {
             </div>
           </div>
 
-          <div className="bg-amber/10 border border-amber/30 rounded-lg p-5">
-            <div className="text-amber text-xs font-bold tracking-widest mb-2 uppercase">The Result</div>
+          <div className="card-highlight">
+            <div className="text-amber text-xs font-black tracking-widest mb-2 uppercase">The Result</div>
             <ul className="space-y-2 text-paper/80 text-sm">
               <li className="flex gap-2"><span className="text-threat-critical">→</span> No real-time threat data flowing to Lomé</li>
               <li className="flex gap-2"><span className="text-threat-critical">→</span> Regional coordination frameworks collapsed</li>

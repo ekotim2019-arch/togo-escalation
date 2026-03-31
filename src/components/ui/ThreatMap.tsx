@@ -29,16 +29,18 @@ export default function ThreatMap({
   threatRadiusKm = 50,
 }: ThreatMapProps) {
   return (
-    <div className={`relative rounded-lg overflow-hidden ${className}`}>
+    <div className={`relative rounded-xl overflow-hidden border border-white/10 shadow-2xl ${className}`}>
+      {/* Bottom gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate/40 pointer-events-none z-10" />
       <MapInner
         zoom={zoom}
         center={center}
         showThreatRadius={showThreatRadius}
         threatRadiusKm={threatRadiusKm}
       />
-      {/* Overlay corners */}
+      {/* Overlay label */}
       <div className="absolute top-3 left-3 z-[1000]">
-        <div className="bg-slate/90 border border-amber/30 rounded px-2 py-1">
+        <div className="bg-slate/90 border border-amber/30 rounded px-2 py-1 shadow-dramatic">
           <span className="text-amber text-xs font-mono tracking-widest">THREAT MAP — CLASSIFIED</span>
         </div>
       </div>

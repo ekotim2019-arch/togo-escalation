@@ -5,12 +5,15 @@ import { BRAND } from '@/lib/constants'
 
 export default function TitleSlide() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-slate relative overflow-hidden">
+    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-ink via-slate to-ink relative overflow-hidden">
       {/* Background grid */}
-      <div className="absolute inset-0 opacity-[0.04]" style={{
+      <div className="absolute inset-0 opacity-[0.035]" style={{
         backgroundImage: 'linear-gradient(#F5F3EE 1px, transparent 1px), linear-gradient(90deg, #F5F3EE 1px, transparent 1px)',
         backgroundSize: '60px 60px',
       }} />
+
+      {/* Radial amber glow behind content */}
+      <div className="absolute inset-0 pointer-events-none bg-glow-amber" />
 
       {/* Top-left classification */}
       <motion.div
@@ -33,7 +36,7 @@ export default function TitleSlide() {
       </motion.div>
 
       {/* Main content */}
-      <div className="flex flex-col items-center text-center px-12 max-w-4xl">
+      <div className="flex flex-col items-center text-center px-12 max-w-5xl">
         {/* Logo / Brand */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -41,9 +44,9 @@ export default function TitleSlide() {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <div className="flex items-center gap-3 mb-2">
+          <div className="flex items-center gap-4 mb-2">
             {/* Kairos Arc logo mark */}
-            <div className="relative w-12 h-12">
+            <div className="relative w-14 h-14">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 4 L44 40 L4 40 Z" stroke="#C4892A" strokeWidth="2" fill="none" />
                 <path d="M24 14 L38 40 L10 40 Z" fill="#C4892A" fillOpacity="0.2" />
@@ -51,34 +54,36 @@ export default function TitleSlide() {
               </svg>
             </div>
             <div>
-              <div className="text-amber text-2xl font-bold tracking-[0.15em] uppercase">{BRAND.name}</div>
-              <div className="text-ash text-xs tracking-[0.25em] uppercase">{BRAND.tagline}</div>
+              <div className="text-amber text-3xl md:text-4xl font-black tracking-[0.3em] uppercase text-glow">
+                {BRAND.name}
+              </div>
+              <div className="text-ash text-xs tracking-[0.3em] uppercase mt-1">{BRAND.tagline}</div>
             </div>
           </div>
         </motion.div>
 
-        {/* Divider */}
+        {/* Accent line */}
         <motion.div
-          className="w-24 h-px bg-amber/40 mb-8"
+          className="accent-line-wide mx-auto mb-10"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
         />
 
         {/* Main title */}
         <motion.h1
-          className="text-4xl md:text-5xl font-bold text-paper leading-tight mb-4"
+          className="slide-title text-paper leading-tight mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
         >
           JNIM Threat Environment
           <br />
-          <span className="text-amber">Assessment</span>
+          <span className="text-amber text-glow-subtle">Assessment</span>
         </motion.h1>
 
         <motion.div
-          className="text-ash text-lg tracking-widest uppercase mb-10"
+          className="text-ash text-xl md:text-2xl font-light tracking-[0.25em] uppercase mb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
@@ -91,13 +96,13 @@ export default function TitleSlide() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex items-center gap-4 bg-threat-critical/10 border border-threat-critical/30 rounded-full px-6 py-3"
+          className="flex items-center gap-4 bg-threat-critical/10 border border-threat-critical/40 rounded-full px-8 py-4 glow-red"
         >
           <div className="relative flex items-center justify-center">
-            <div className="w-3 h-3 rounded-full bg-threat-critical" />
-            <div className="absolute w-3 h-3 rounded-full bg-threat-critical animate-ping opacity-75" />
+            <div className="w-4 h-4 rounded-full bg-threat-critical" />
+            <div className="absolute w-4 h-4 rounded-full bg-threat-critical animate-ping opacity-75" />
           </div>
-          <span className="text-threat-critical text-sm font-bold tracking-[0.2em] uppercase">
+          <span className="text-threat-critical text-sm font-black tracking-[0.25em] uppercase">
             Threat Level: High — Escalating
           </span>
         </motion.div>
@@ -105,7 +110,7 @@ export default function TitleSlide() {
 
       {/* Bottom bar */}
       <motion.div
-        className="absolute bottom-16 left-0 right-0 flex justify-center"
+        className="absolute bottom-8 left-0 right-0 flex justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.3 }}

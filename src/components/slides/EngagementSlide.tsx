@@ -39,26 +39,30 @@ const deliverables = [
 
 export default function EngagementSlide() {
   return (
-    <div className="w-full h-full flex flex-col bg-slate">
+    <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink relative overflow-hidden">
+      {/* Subtle amber glow */}
+      <div className="absolute inset-0 pointer-events-none bg-glow-amber opacity-50" />
+
       {/* Header */}
       <motion.div
-        className="px-16 pt-10 pb-4 shrink-0"
+        className="px-16 pt-10 pb-4 shrink-0 relative z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 05 — Engagement Model</div>
-        <h2 className="text-3xl font-bold text-paper">{BRAND.name} Delivery Framework</h2>
+        <h2 className="slide-title text-paper">{BRAND.name} Delivery Framework</h2>
+        <div className="accent-line mt-3" />
       </motion.div>
 
-      <div className="flex-1 flex gap-6 px-16 pb-16 min-h-0">
+      <div className="flex-1 flex gap-6 px-16 pb-12 min-h-0 relative z-10">
         {/* Alert tiers */}
         <div className="flex-1 flex flex-col gap-3">
-          <div className="text-ash text-xs font-bold tracking-widest uppercase mb-1">Alert Tiering</div>
+          <div className="text-ash text-xs font-black tracking-widest uppercase mb-1">Alert Tiering</div>
           {alertTiers.map((tier, i) => (
             <motion.div
               key={tier.level}
-              className="flex-1 rounded-xl p-4 border"
+              className="flex-1 rounded-2xl p-5 border"
               style={{ borderColor: `${tier.color}30`, backgroundColor: `${tier.color}08` }}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -69,8 +73,8 @@ export default function EngagementSlide() {
                   <div className={`w-3 h-3 rounded-full ${tier.dot}`} />
                   {i === 0 && <div className={`absolute inset-0 w-3 h-3 rounded-full ${tier.dot} animate-ping opacity-60`} />}
                 </div>
-                <span className="font-bold text-sm tracking-widest" style={{ color: tier.color }}>{tier.level}</span>
-                <span className="text-ash text-xs ml-auto font-mono">{tier.time}</span>
+                <span className="font-black text-sm tracking-widest" style={{ color: tier.color }}>{tier.level}</span>
+                <span className="text-ash text-xs ml-auto font-mono font-bold">{tier.time}</span>
               </div>
               <p className="text-paper/70 text-xs mb-2">{tier.desc}</p>
               <div className="space-y-0.5">
@@ -91,17 +95,17 @@ export default function EngagementSlide() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="text-ash text-xs font-bold tracking-widest uppercase mb-3">Deliverables Schedule</div>
+          <div className="text-ash text-xs font-black tracking-widest uppercase mb-3">Deliverables Schedule</div>
           <div className="space-y-3">
             {deliverables.map((d, i) => (
               <motion.div
                 key={d.freq}
-                className="bg-slate border border-ash/20 rounded-xl p-4"
+                className="bg-white/[0.03] border border-white/10 rounded-2xl p-4"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + i * 0.08 }}
               >
-                <div className="text-amber text-xs font-bold tracking-widest uppercase mb-2">{d.freq}</div>
+                <div className="text-amber text-xs font-black tracking-widest uppercase mb-2">{d.freq}</div>
                 <ul className="space-y-1">
                   {d.items.map((item, j) => (
                     <li key={j} className="flex gap-2 text-paper/70 text-xs">

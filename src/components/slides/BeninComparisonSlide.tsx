@@ -6,7 +6,7 @@ import { beninComparison } from '@/lib/data'
 
 export default function BeninComparisonSlide() {
   return (
-    <div className="w-full h-full flex flex-col bg-slate">
+    <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink">
       {/* Header */}
       <motion.div
         className="px-16 pt-10 pb-4 shrink-0"
@@ -15,10 +15,11 @@ export default function BeninComparisonSlide() {
         transition={{ duration: 0.5 }}
       >
         <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 02 — The Benin Precedent</div>
-        <h2 className="text-3xl font-bold text-paper">A Pattern That Repeats</h2>
+        <h2 className="slide-title text-paper">A Pattern That Repeats</h2>
+        <div className="accent-line mt-3" />
       </motion.div>
 
-      <div className="flex-1 flex flex-col px-16 pb-16 gap-6 min-h-0">
+      <div className="flex-1 flex flex-col px-16 pb-12 gap-6 min-h-0">
         {/* Column headers */}
         <motion.div
           className="grid grid-cols-[120px_1fr_1fr] gap-3"
@@ -28,11 +29,11 @@ export default function BeninComparisonSlide() {
         >
           <div />
           <div className="text-center">
-            <span className="text-amber text-sm font-bold tracking-widest uppercase">Benin</span>
+            <span className="text-amber text-sm font-black tracking-widest uppercase">Benin</span>
             <div className="text-ash text-xs mt-1">{beninComparison.beninNote}</div>
           </div>
           <div className="text-center">
-            <span className="text-threat-elevated text-sm font-bold tracking-widest uppercase">Togo</span>
+            <span className="text-threat-elevated text-sm font-black tracking-widest uppercase">Togo</span>
             <div className="text-ash text-xs mt-1">{beninComparison.togoNote}</div>
           </div>
         </motion.div>
@@ -49,7 +50,7 @@ export default function BeninComparisonSlide() {
 
         {/* Warning box */}
         <motion.div
-          className="bg-threat-critical/10 border border-threat-critical/50 rounded-lg px-6 py-4 flex items-center gap-4"
+          className="card-danger flex items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0 }}
@@ -59,9 +60,9 @@ export default function BeninComparisonSlide() {
             <div className="absolute inset-0 w-4 h-4 rounded-full bg-threat-critical animate-ping opacity-60" />
           </div>
           <div>
-            <div className="text-threat-critical font-bold text-sm tracking-wide">WARNING: Pattern Convergence</div>
+            <div className="text-threat-critical font-black text-sm tracking-wide">WARNING: Pattern Convergence</div>
             <div className="text-paper/80 text-sm mt-1">
-              {beninComparison.warning} — <span className="text-threat-critical font-semibold">Togo is in the escalation phase now.</span> The window for effective pre-emptive action is narrowing.
+              {beninComparison.warning} — <span className="text-threat-critical font-bold">Togo is in the escalation phase now.</span> The window for effective pre-emptive action is narrowing.
             </div>
           </div>
         </motion.div>

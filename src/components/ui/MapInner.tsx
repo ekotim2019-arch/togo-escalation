@@ -69,7 +69,7 @@ export default function MapInner({ zoom, center, showThreatRadius, threatRadiusK
       attributionControl={false}
     >
       <TileLayer
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
         attribution=""
       />
 
@@ -82,8 +82,8 @@ export default function MapInner({ zoom, center, showThreatRadius, threatRadiusK
             pathOptions={{
               color: '#DC2626',
               fillColor: '#DC2626',
-              fillOpacity: 0.08,
-              weight: 1.5,
+              fillOpacity: 0.12,
+              weight: 2,
               dashArray: '6 4',
             }}
           />
@@ -93,8 +93,8 @@ export default function MapInner({ zoom, center, showThreatRadius, threatRadiusK
             pathOptions={{
               color: '#DC2626',
               fillColor: '#DC2626',
-              fillOpacity: 0.15,
-              weight: 1,
+              fillOpacity: 0.18,
+              weight: 2,
             }}
           />
         </>

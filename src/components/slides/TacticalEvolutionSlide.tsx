@@ -35,7 +35,7 @@ const stages = [
 
 export default function TacticalEvolutionSlide() {
   return (
-    <div className="w-full h-full flex flex-col bg-slate">
+    <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink">
       {/* Header */}
       <motion.div
         className="px-16 pt-10 pb-6 shrink-0"
@@ -44,19 +44,20 @@ export default function TacticalEvolutionSlide() {
         transition={{ duration: 0.5 }}
       >
         <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 02 — Tactical Evolution</div>
-        <h2 className="text-3xl font-bold text-paper">JNIM is Adapting</h2>
+        <h2 className="slide-title text-paper">JNIM is Adapting</h2>
+        <div className="accent-line mt-3" />
       </motion.div>
 
-      <div className="flex-1 flex flex-col px-16 pb-16 gap-6 min-h-0">
+      <div className="flex-1 flex flex-col px-16 pb-12 gap-6 min-h-0">
         {/* Evolution stages */}
         <div className="flex gap-6 flex-1">
           {stages.map((stage, i) => (
             <motion.div
               key={stage.phase}
-              className={`flex-1 rounded-xl p-6 border relative overflow-hidden ${
+              className={`flex-1 rounded-2xl p-7 border relative overflow-hidden ${
                 stage.highlight
                   ? 'bg-threat-critical/10 border-threat-critical/50'
-                  : 'bg-slate/50 border-ash/20'
+                  : 'bg-white/[0.03] border-white/10'
               }`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -64,25 +65,25 @@ export default function TacticalEvolutionSlide() {
             >
               {/* Arrow connector */}
               {i < stages.length - 1 && (
-                <div className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 text-ash/40 text-xl">→</div>
+                <div className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 text-ash/40 text-2xl">→</div>
               )}
 
               <div className="text-5xl mb-4">{stage.icon}</div>
-              <div className="text-ash text-xs font-mono mb-1">{stage.period}</div>
-              <h3 className="text-xl font-bold mb-2" style={{ color: stage.color }}>{stage.title}</h3>
-              <p className="text-paper/70 text-sm leading-relaxed mb-4">{stage.description}</p>
+              <div className="text-ash text-xs font-mono mb-2">{stage.period}</div>
+              <h3 className="text-2xl font-black mb-3" style={{ color: stage.color }}>{stage.title}</h3>
+              <p className="text-paper/70 text-sm leading-relaxed mb-5">{stage.description}</p>
 
               <div
-                className="inline-flex items-center gap-2 text-xs font-bold tracking-widest px-3 py-1 rounded-full"
-                style={{ color: stage.color, backgroundColor: `${stage.color}15`, border: `1px solid ${stage.color}40` }}
+                className="inline-flex items-center gap-2 text-xs font-black tracking-widest px-3 py-1.5 rounded-full"
+                style={{ color: stage.color, backgroundColor: `${stage.color}18`, border: `1px solid ${stage.color}40` }}
               >
                 <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: stage.color }} />
                 {stage.severity}
               </div>
 
               {stage.highlight && (
-                <div className="mt-4 bg-threat-critical/10 rounded-lg p-3 border border-threat-critical/20">
-                  <div className="text-threat-critical text-xs font-bold tracking-widest mb-1">APR 2025 — CONFIRMED</div>
+                <div className="mt-5 bg-threat-critical/10 rounded-xl p-3 border border-threat-critical/20">
+                  <div className="text-threat-critical text-xs font-black tracking-widest mb-1">APR 2025 — CONFIRMED</div>
                   <div className="text-paper/80 text-xs">
                     Kamikaze drone strike — first documented use by JNIM in West Africa coastal region
                   </div>
@@ -94,14 +95,14 @@ export default function TacticalEvolutionSlide() {
 
         {/* Bottom fact */}
         <motion.div
-          className="bg-amber/10 border border-amber/30 rounded-lg px-6 py-4 flex items-center gap-4"
+          className="card-highlight flex items-center gap-4"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          <div className="text-amber text-2xl shrink-0">▲</div>
+          <div className="text-amber text-2xl shrink-0 font-black">▲</div>
           <div className="text-paper">
-            <span className="text-amber font-bold">JNIM is the most prolific non-state drone user in Africa</span>
+            <span className="text-amber font-black">JNIM is the most prolific non-state drone user in Africa</span>
             {' '}— and this capability is now being deployed along the border corridor.
           </div>
         </motion.div>
