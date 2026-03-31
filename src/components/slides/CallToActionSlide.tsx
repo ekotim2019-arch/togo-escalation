@@ -17,7 +17,7 @@ export default function CallToActionSlide() {
         </div>
 
         {/* Scenarios */}
-        <div className="flex flex-col gap-8 mb-16">
+        <div className="flex flex-col gap-3 mb-8">
           {/* Best Case */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -29,7 +29,7 @@ export default function CallToActionSlide() {
               <div className="font-serif text-[42px] font-light text-white/35 leading-none">15</div>
               <div className="font-mono text-[20px] text-white/50">%</div>
             </div>
-            <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-8">
+            <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-4">
               <div className="font-mono text-[20px] tracking-[0.1em] uppercase text-white/80 mb-2">Best Case</div>
               <div className="font-serif text-xl text-white/70 leading-relaxed">
                 JNIM fractures under internal pressure. Regional stabilisation holds. Togo border remains contested but manageable.

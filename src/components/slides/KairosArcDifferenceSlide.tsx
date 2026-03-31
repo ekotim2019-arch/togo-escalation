@@ -47,11 +47,11 @@ export default function KairosArcDifferenceSlide() {
         <div className="border border-white/[0.08] rounded-lg overflow-hidden">
           {/* Header */}
           <div className="grid grid-cols-[240px_1fr_1fr] bg-white/[0.03]">
-            <div className="px-8 py-8" />
-            <div className="px-8 py-8 font-mono text-[18px] uppercase tracking-[0.12em] text-white/80 border-l border-white/[0.06]">
+            <div className="px-6 py-3" />
+            <div className="px-6 py-3 font-mono text-[18px] uppercase tracking-[0.12em] text-white/80 border-l border-white/[0.06]">
               Conventional Intelligence
             </div>
-            <div className="px-8 py-8 font-mono text-[18px] uppercase tracking-[0.12em] text-amber-lt border-l border-amber/20">
+            <div className="px-6 py-3 font-mono text-[18px] uppercase tracking-[0.12em] text-amber-lt border-l border-amber/20">
               Kairos Arc
             </div>
           </div>
@@ -67,13 +67,13 @@ export default function KairosArcDifferenceSlide() {
                 row.highlight ? 'border-t border-amber/20 bg-amber/[0.04]' : 'border-t border-white/[0.06]'
               }`}
             >
-              <div className="px-8 py-8 font-mono text-[20px] uppercase tracking-[0.1em] text-white/80">
+              <div className="px-6 py-3 font-mono text-[20px] uppercase tracking-[0.1em] text-white/80">
                 {row.label}
               </div>
-              <div className="px-8 py-8 text-[15px] text-white/65 border-l border-white/[0.06]">
+              <div className="px-6 py-3 text-[15px] text-white/65 border-l border-white/[0.06]">
                 {row.conventional}
               </div>
-              <div className={`px-8 py-8 text-[15px] border-l border-amber/15 ${row.highlight ? 'text-amber-lt font-medium' : 'text-white/85'}`}>
+              <div className={`px-6 py-3 text-[15px] border-l border-amber/15 ${row.highlight ? 'text-amber-lt font-medium' : 'text-white/85'}`}>
                 {row.kairos}
               </div>
             </motion.div>

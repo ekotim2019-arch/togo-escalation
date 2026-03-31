@@ -62,7 +62,7 @@ export default function TimelineSlide() {
           {/* Vertical line */}
           <div className="absolute left-[100px] top-0 bottom-0 w-px bg-amber/20" />
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-3">
             {events.map((event, i) => (
               <motion.div
                 key={i}
@@ -87,7 +87,7 @@ export default function TimelineSlide() {
                 </div>
 
                 {/* Content */}
-                <div className={`flex-1 py-6 px-8 rounded-r ${
+                <div className={`flex-1 py-3 px-6 rounded-r ${
                   event.highlight
                     ? 'bg-red/[0.08] border-l-[3px] border-red'
                     : event.severity === 'critical'

@@ -42,7 +42,7 @@ export default function RequirementsSlide() {
           </h2>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-3">
           {requirements.map((item, i) => (
             <motion.div
               key={i}
