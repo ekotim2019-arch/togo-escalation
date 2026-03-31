@@ -203,7 +203,7 @@ export default function DiapagaMapSlide() {
             </svg>
 
             {/* Active threat badge overlay */}
-            <div className="absolute top-3 right-3 flex items-center gap-2 bg-slate/95 px-12 py-6 rounded border border-red/30">
+            <div className="absolute top-3 right-3 flex items-center gap-2 bg-slate/95 px-6 py-3 rounded border border-red/30">
               <div className="w-1.5 h-1.5 bg-red rounded-full animate-pulse-slow" />
               <span className="font-mono text-[18px] tracking-[0.1em] uppercase text-red font-bold">Active threat zone</span>
             </div>
@@ -212,7 +212,7 @@ export default function DiapagaMapSlide() {
           {/* Info Panel */}
           <div className="w-[300px] flex flex-col gap-6">
             {/* Key stat */}
-            <div className="bg-red/10 border-l-[3px] border-red rounded-r-md p-16">
+            <div className="bg-red/10 border-l-[3px] border-red rounded-r-md p-8">
               <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-red font-bold mb-2">
                 Threat Proximity
               </div>
@@ -225,7 +225,7 @@ export default function DiapagaMapSlide() {
             </div>
 
             {/* Strategic impact */}
-            <div className="bg-white/[0.03] border border-amber/15 rounded-md p-16">
+            <div className="bg-white/[0.03] border border-amber/15 rounded-md p-8">
               <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-amber-lt mb-2">
                 Strategic Impact
               </div>
@@ -235,7 +235,7 @@ export default function DiapagaMapSlide() {
             </div>
 
             {/* FOB established */}
-            <div className="bg-white/[0.03] border border-white/[0.08] rounded-md p-16">
+            <div className="bg-white/[0.03] border border-white/[0.08] rounded-md p-8">
               <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-white/80 mb-2">
                 FOB Established
               </div>
@@ -245,7 +245,7 @@ export default function DiapagaMapSlide() {
             </div>
 
             {/* N18 risk */}
-            <div className="bg-red/[0.05] border border-red/15 rounded-md p-16">
+            <div className="bg-red/[0.05] border border-red/15 rounded-md p-8">
               <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-red font-bold mb-2">
                 N18 Corridor
               </div>
