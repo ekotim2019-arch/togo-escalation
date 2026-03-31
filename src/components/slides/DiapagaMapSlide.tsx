@@ -11,7 +11,7 @@ export default function DiapagaMapSlide() {
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-6 h-px bg-amber" />
-            <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-amber">
+            <span className="font-mono text-[20px] tracking-[0.18em] uppercase text-amber-lt">
               Threat Geometry
             </span>
           </div>
@@ -85,7 +85,7 @@ export default function DiapagaMapSlide() {
             {/* Active threat badge */}
             <div className="absolute top-3 right-3 flex items-center gap-2 bg-slate/95 px-3 py-1.5 rounded border border-red/30">
               <div className="w-1.5 h-1.5 bg-red rounded-full animate-pulse-slow" />
-              <span className="font-mono text-[9px] tracking-[0.1em] uppercase text-red">Active threat zone</span>
+              <span className="font-mono text-[18px] tracking-[0.1em] uppercase text-red">Active threat zone</span>
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export default function DiapagaMapSlide() {
           <div className="w-[220px] flex flex-col gap-4">
             {/* Key stat card */}
             <div className="bg-red/10 border-l-[3px] border-red rounded-r-md p-4">
-              <div className="font-mono text-[9px] tracking-[0.1em] uppercase text-red/70 mb-2">
+              <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-red mb-2">
                 Threat Proximity
               </div>
               <div className="font-serif text-5xl font-light text-red leading-none">
@@ -106,7 +106,7 @@ export default function DiapagaMapSlide() {
 
             {/* Context card */}
             <div className="bg-white/[0.03] border border-amber/15 rounded-md p-4">
-              <div className="font-mono text-[9px] tracking-[0.1em] uppercase text-amber/60 mb-2">
+              <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-amber-lt mb-2">
                 Strategic Impact
               </div>
               <div className="text-[13px] text-white/70 leading-relaxed">
@@ -116,7 +116,7 @@ export default function DiapagaMapSlide() {
 
             {/* Timeline card */}
             <div className="bg-white/[0.03] border border-white/[0.08] rounded-md p-4">
-              <div className="font-mono text-[9px] tracking-[0.1em] uppercase text-white/40 mb-2">
+              <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-white/80 mb-2">
                 FOB Established
               </div>
               <div className="font-serif text-xl text-white/80">

@@ -42,7 +42,7 @@ export default function EngagementSlide() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-5">
           {tiers.map((tier, i) => {
             const isRed = tier.color === 'red';
             const isAmber = tier.color === 'amber';
@@ -62,9 +62,9 @@ export default function EngagementSlide() {
                 }`}
               >
                 {/* Level + timeframe */}
-                <div className="w-32 shrink-0">
-                  <div className={`font-mono text-[13px] tracking-[0.12em] uppercase font-medium ${
-                    isRed ? 'text-red' : isAmber ? 'text-amber' : 'text-white/40'
+                <div className="w-44 shrink-0">
+                  <div className={`font-mono text-[26px] tracking-[0.12em] uppercase font-medium ${
+                    isRed ? 'text-red' : isAmber ? 'text-amber-lt' : 'text-white/80'
                   }`}>
                     {tier.level}
                   </div>
@@ -76,9 +76,9 @@ export default function EngagementSlide() {
                 </div>
 
                 <div className="flex-1">
-                  <div className="font-mono text-[9px] uppercase tracking-[0.1em] text-white/30 mb-1.5">Trigger conditions</div>
+                  <div className="font-mono text-[18px] uppercase tracking-[0.1em] text-white/60 mb-1.5">Trigger conditions</div>
                   <div className="text-[14px] text-white/70 mb-3 leading-relaxed">{tier.trigger}</div>
-                  <div className="font-mono text-[10px] text-white/35">{tier.format}</div>
+                  <div className="font-mono text-[20px] text-white/70">{tier.format}</div>
                 </div>
               </motion.div>
             );
@@ -92,7 +92,7 @@ export default function EngagementSlide() {
           transition={{ delay: 0.7 }}
           className="mt-6 text-center"
         >
-          <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-white/25">
+          <span className="font-mono text-[20px] tracking-[0.1em] uppercase text-white/50">
             All deliverables encrypted · Chain of custody documented · Analyst available for debrief
           </span>
         </motion.div>

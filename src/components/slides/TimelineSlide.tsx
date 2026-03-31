@@ -53,7 +53,7 @@ export default function TimelineSlide() {
           <h2 className="font-serif text-[46px] font-light text-white">
             JNIM Incident <em className="italic text-amber-lt">Timeline</em>
           </h2>
-          <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-white/30 mt-1">
+          <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-white/60 mt-1">
             Oct 2025 — Mar 2026
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function TimelineSlide() {
           {/* Vertical line */}
           <div className="absolute left-[100px] top-0 bottom-0 w-px bg-amber/20" />
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-5">
             {events.map((event, i) => (
               <motion.div
                 key={i}
@@ -72,8 +72,8 @@ export default function TimelineSlide() {
                 className="flex items-start gap-6"
               >
                 {/* Date */}
-                <div className="w-[88px] shrink-0 text-right pt-2">
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-white/40">
+                <div className="w-[108px] shrink-0 text-right pt-2">
+                  <span className="font-mono text-[20px] tracking-[0.1em] uppercase text-white/80">
                     {event.date}
                   </span>
                 </div>
@@ -96,10 +96,10 @@ export default function TimelineSlide() {
                     ? 'bg-amber/[0.06] border-l-[2px] border-amber/60'
                     : 'bg-white/[0.02] border-l-[2px] border-amber/30'
                 }`}>
-                  <div className={`font-mono text-[10px] tracking-[0.1em] uppercase mb-1 ${
+                  <div className={`font-mono text-[18px] tracking-[0.1em] uppercase mb-1 ${
                     event.highlight ? 'text-red' :
-                    event.severity === 'critical' ? 'text-red/70' :
-                    event.severity === 'current' ? 'text-amber' : 'text-amber/60'
+                    event.severity === 'critical' ? 'text-red' :
+                    event.severity === 'current' ? 'text-amber-lt' : 'text-amber-lt'
                   }`}>
                     {event.label}
                     {event.highlight && <span className="ml-2 opacity-70">← February Offensive</span>}

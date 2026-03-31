@@ -35,7 +35,7 @@ export default function KairosArcDifferenceSlide() {
         >
           {pipeline.map((step, i) => (
             <div key={i} className="flex items-center gap-2 shrink-0">
-              <div className="px-3 py-1.5 bg-amber/[0.08] border border-amber/20 rounded text-amber font-mono text-[9px] tracking-[0.1em] uppercase">
+              <div className="px-3 py-2 bg-amber/[0.08] border border-amber/20 rounded text-amber-lt font-mono text-[18px] tracking-[0.1em] uppercase">
                 {step}
               </div>
               {i < pipeline.length - 1 && <div className="text-amber/30 text-xs">→</div>}
@@ -46,12 +46,12 @@ export default function KairosArcDifferenceSlide() {
         {/* Comparison table */}
         <div className="border border-white/[0.08] rounded-lg overflow-hidden">
           {/* Header */}
-          <div className="grid grid-cols-[140px_1fr_1fr] bg-white/[0.03]">
-            <div className="px-4 py-3" />
-            <div className="px-4 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-white/40 border-l border-white/[0.06]">
+          <div className="grid grid-cols-[180px_1fr_1fr] bg-white/[0.03]">
+            <div className="px-4 py-4" />
+            <div className="px-4 py-4 font-mono text-[18px] uppercase tracking-[0.12em] text-white/80 border-l border-white/[0.06]">
               Conventional Intelligence
             </div>
-            <div className="px-4 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-amber border-l border-amber/20">
+            <div className="px-4 py-4 font-mono text-[18px] uppercase tracking-[0.12em] text-amber-lt border-l border-amber/20">
               Kairos Arc
             </div>
           </div>
@@ -63,17 +63,17 @@ export default function KairosArcDifferenceSlide() {
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 + i * 0.07 }}
-              className={`grid grid-cols-[140px_1fr_1fr] ${
+              className={`grid grid-cols-[180px_1fr_1fr] ${
                 row.highlight ? 'border-t border-amber/20 bg-amber/[0.04]' : 'border-t border-white/[0.06]'
               }`}
             >
-              <div className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.1em] text-white/40">
+              <div className="px-4 py-4 font-mono text-[20px] uppercase tracking-[0.1em] text-white/80">
                 {row.label}
               </div>
-              <div className="px-4 py-3 text-[13px] text-white/35 border-l border-white/[0.06]">
+              <div className="px-4 py-4 text-[15px] text-white/65 border-l border-white/[0.06]">
                 {row.conventional}
               </div>
-              <div className={`px-4 py-3 text-[13px] border-l border-amber/15 ${row.highlight ? 'text-amber font-medium' : 'text-white/80'}`}>
+              <div className={`px-4 py-4 text-[15px] border-l border-amber/15 ${row.highlight ? 'text-amber-lt font-medium' : 'text-white/85'}`}>
                 {row.kairos}
               </div>
             </motion.div>

@@ -59,7 +59,7 @@ export default function EarlyWarningSlide() {
               <div className={`font-serif text-[40px] font-light leading-none mb-1 ${ind.color === 'red' ? 'text-red' : 'text-amber'}`}>
                 {ind.lead}
               </div>
-              <div className={`font-mono text-[9px] uppercase tracking-[0.12em] mb-4 ${ind.color === 'red' ? 'text-red/60' : 'text-amber/60'}`}>
+              <div className={`font-mono text-[18px] uppercase tracking-[0.12em] mb-4 ${ind.color === 'red' ? 'text-red' : 'text-amber-lt'}`}>
                 advance warning
               </div>
 
@@ -78,7 +78,7 @@ export default function EarlyWarningSlide() {
                 {ind.examples.map((ex, j) => (
                   <div key={j} className="flex items-center gap-2">
                     <div className={`w-1 h-1 rounded-full ${ind.color === 'red' ? 'bg-red/50' : 'bg-amber/50'}`} />
-                    <span className="font-mono text-[10px] text-white/40">{ex}</span>
+                    <span className="font-mono text-[20px] text-white/80">{ex}</span>
                   </div>
                 ))}
               </div>

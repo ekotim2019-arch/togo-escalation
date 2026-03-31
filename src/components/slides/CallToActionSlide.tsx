@@ -27,10 +27,10 @@ export default function CallToActionSlide() {
           >
             <div className="w-20 flex flex-col items-center justify-center">
               <div className="font-serif text-[42px] font-light text-white/35 leading-none">15</div>
-              <div className="font-mono text-[10px] text-white/25">%</div>
+              <div className="font-mono text-[20px] text-white/50">%</div>
             </div>
             <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-5">
-              <div className="font-mono text-[10px] tracking-[0.1em] uppercase text-white/40 mb-2">Best Case</div>
+              <div className="font-mono text-[20px] tracking-[0.1em] uppercase text-white/80 mb-2">Best Case</div>
               <div className="font-serif text-xl text-white/70 leading-relaxed">
                 JNIM fractures under internal pressure. Regional stabilisation holds. Togo border remains contested but manageable.
               </div>
@@ -46,10 +46,10 @@ export default function CallToActionSlide() {
           >
             <div className="w-20 flex flex-col items-center justify-center">
               <div className="font-serif text-[42px] font-light text-amber leading-none">60</div>
-              <div className="font-mono text-[10px] text-amber/60">%</div>
+              <div className="font-mono text-[20px] text-amber-lt">%</div>
             </div>
             <div className="flex-1 bg-amber/[0.06] border border-amber/20 border-l-[3px] border-l-amber rounded-r-md p-5">
-              <div className="font-mono text-[10px] tracking-[0.1em] uppercase text-amber mb-2">Most Likely</div>
+              <div className="font-mono text-[20px] tracking-[0.1em] uppercase text-amber-lt mb-2">Most Likely</div>
               <div className="font-serif text-xl text-white/85 leading-relaxed">
                 Sustained attritional campaign. <span className="text-amber-lt">40–80 FAT casualties</span> over 12 months. Periodic cross-border incursions. No territorial loss but persistent instability.
               </div>
@@ -65,10 +65,10 @@ export default function CallToActionSlide() {
           >
             <div className="w-20 flex flex-col items-center justify-center">
               <div className="font-serif text-[42px] font-light text-red leading-none">25</div>
-              <div className="font-mono text-[10px] text-red/60">%</div>
+              <div className="font-mono text-[20px] text-red">%</div>
             </div>
             <div className="flex-1 bg-red/[0.06] border border-red/20 border-l-[3px] border-l-red rounded-r-md p-5">
-              <div className="font-mono text-[10px] tracking-[0.1em] uppercase text-red mb-2">Worst Case</div>
+              <div className="font-mono text-[20px] tracking-[0.1em] uppercase text-red mb-2">Worst Case</div>
               <div className="font-serif text-xl text-white/85 leading-relaxed">
                 Mass-casualty event (<span className="text-red">30+ KIA single incident</span>). JNIM establishes governance structures in Togolese territory. Regional contagion accelerates.
               </div>

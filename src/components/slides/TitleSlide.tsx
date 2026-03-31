@@ -21,7 +21,7 @@ export default function TitleSlide() {
           className="flex items-center gap-3 mb-12"
         >
           <div className="w-8 h-px bg-amber" />
-          <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-amber">
+          <span className="font-mono text-[20px] tracking-[0.18em] uppercase text-amber-lt">
             Capability Demonstration · March 2026
           </span>
         </motion.div>
@@ -38,7 +38,7 @@ export default function TitleSlide() {
             <div className="font-serif text-lg tracking-[0.18em] uppercase text-white">
               Kairos Arc
             </div>
-            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-amber/60 mt-0.5">
+            <div className="font-mono text-[16px] tracking-[0.15em] uppercase text-amber mt-0.5">
               Know before it matters
             </div>
           </div>
@@ -73,15 +73,15 @@ export default function TitleSlide() {
           className="flex gap-12 pt-8 border-t border-amber/20"
         >
           <div>
-            <div className="font-mono text-[9px] tracking-[0.12em] uppercase text-amber/50 mb-1">Classification</div>
+            <div className="font-mono text-[18px] tracking-[0.12em] uppercase text-amber mb-1">Classification</div>
             <div className="text-[13px] text-white/70">Client Confidential</div>
           </div>
           <div>
-            <div className="font-mono text-[9px] tracking-[0.12em] uppercase text-amber/50 mb-1">Prepared for</div>
+            <div className="font-mono text-[18px] tracking-[0.12em] uppercase text-amber mb-1">Prepared for</div>
             <div className="text-[13px] text-white/70">Government of Togo</div>
           </div>
           <div>
-            <div className="font-mono text-[9px] tracking-[0.12em] uppercase text-amber/50 mb-1">Date</div>
+            <div className="font-mono text-[18px] tracking-[0.12em] uppercase text-amber mb-1">Date</div>
             <div className="text-[13px] text-white/70">31 March 2026</div>
           </div>
         </motion.div>

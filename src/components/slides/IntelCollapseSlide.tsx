@@ -23,9 +23,9 @@ export default function IntelCollapseSlide() {
           className="flex gap-4 mb-8"
         >
           <div className="flex-1 bg-red/[0.08] border border-red/20 rounded-md p-5 text-center">
-            <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-red mb-3">AES Alliance</div>
+            <div className="font-mono text-[20px] uppercase tracking-[0.15em] text-red mb-3">AES Alliance</div>
             <div className="font-serif text-2xl text-white/70 mb-2">Mali · Burkina · Niger</div>
-            <div className="font-mono text-[10px] text-white/40">Withdrew from ECOWAS · 2024</div>
+            <div className="font-mono text-[20px] text-white/80">Withdrew from ECOWAS · 2024</div>
           </div>
 
           <div className="flex items-center shrink-0 px-2">
@@ -36,9 +36,9 @@ export default function IntelCollapseSlide() {
           </div>
 
           <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-5 text-center">
-            <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-white/40 mb-3">ECOWAS Framework</div>
+            <div className="font-mono text-[20px] uppercase tracking-[0.15em] text-white/80 mb-3">ECOWAS Framework</div>
             <div className="font-serif text-2xl text-white/40 mb-2">Coastal States</div>
-            <div className="font-mono text-[10px] text-white/25">Intel sharing: severed</div>
+            <div className="font-mono text-[20px] text-white/50">Intel sharing: severed</div>
           </div>
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function IntelCollapseSlide() {
           transition={{ delay: 0.4 }}
           className="bg-red/[0.06] border border-red/15 rounded-md py-4 px-6 mb-8"
         >
-          <div className="font-mono text-[9px] uppercase tracking-[0.12em] text-red mb-2">G5 Sahel Dissolution</div>
+          <div className="font-mono text-[18px] uppercase tracking-[0.12em] text-red mb-2">G5 Sahel Dissolution</div>
           <p className="text-[14px] text-white/70 leading-relaxed">
             AES states declared <span className="text-white">&ldquo;no intention to extend operations to coastal countries&rdquo;</span> — leaving Togo, Benin, and Ghana without credible intelligence partners in the Sahel.
           </p>

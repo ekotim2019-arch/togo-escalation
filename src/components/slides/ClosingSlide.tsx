@@ -27,7 +27,7 @@ export default function ClosingSlide() {
           <div className="font-serif text-[28px] tracking-[0.2em] uppercase text-white mb-2">
             Kairos Arc
           </div>
-          <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-amber/60 mb-16">
+          <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-amber-lt mb-16">
             Know before it matters
           </div>
         </motion.div>
@@ -52,14 +52,14 @@ export default function ClosingSlide() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="font-mono text-[11px] tracking-[0.08em] text-white/35"
+          className="font-mono text-[22px] tracking-[0.08em] text-white/70"
         >
           Contact details to be provided by intermediary
         </motion.div>
       </div>
 
       {/* Bottom classification bar */}
-      <div className="absolute bottom-0 left-0 right-0 px-6 py-3 flex justify-between border-t border-amber/10 font-mono text-[9px] tracking-[0.1em] uppercase text-white/25">
+      <div className="absolute bottom-0 left-0 right-0 px-6 py-3 flex justify-between border-t border-amber/10 font-mono text-[18px] tracking-[0.1em] uppercase text-white/50">
         <span>Client Confidential</span>
         <span>KA-2026-03-001</span>
         <span>31 March 2026</span>

@@ -42,12 +42,12 @@ export default function LeadTimeSlide() {
         >
           <div className="text-right">
             <div className="font-serif text-4xl font-light text-white">420</div>
-            <div className="font-mono text-[9px] tracking-[0.1em] uppercase text-amber/60">Kairos Arc</div>
+            <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-amber-lt">Kairos Arc</div>
           </div>
-          <div className="font-mono text-[11px] text-white/30">vs</div>
+          <div className="font-mono text-[22px] text-white/60">vs</div>
           <div className="text-left">
             <div className="font-serif text-4xl font-light text-white/35">17</div>
-            <div className="font-mono text-[9px] tracking-[0.1em] uppercase text-white/25">Conventional</div>
+            <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-white/50">Conventional</div>
           </div>
         </motion.div>
 

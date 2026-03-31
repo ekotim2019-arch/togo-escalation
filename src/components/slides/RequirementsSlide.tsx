@@ -42,18 +42,18 @@ export default function RequirementsSlide() {
           </h2>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           {requirements.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.15 + i * 0.1 }}
-              className="flex items-start gap-5 py-4 px-5 bg-white/[0.02] border border-white/[0.07] rounded-md"
+              className="flex items-start gap-5 py-5 px-5 bg-white/[0.02] border border-white/[0.07] rounded-md"
             >
               {/* Number + checkmark */}
               <div className="w-10 shrink-0 flex flex-col items-center gap-1 pt-0.5">
-                <div className="font-mono text-[10px] text-white/25">{String(i + 1).padStart(2, '0')}</div>
+                <div className="font-mono text-[20px] text-white/50">{String(i + 1).padStart(2, '0')}</div>
                 <div className="w-5 h-5 rounded-full bg-amber/[0.12] border border-amber/30 flex items-center justify-center">
                   <svg viewBox="0 0 12 12" className="w-3 h-3">
                     <path d="M2 6l3 3 5-5" stroke="#C4892A" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
@@ -62,7 +62,7 @@ export default function RequirementsSlide() {
               </div>
               <div className="flex-1">
                 <div className="font-serif text-base text-white mb-1">{item.req}</div>
-                <div className="text-[12px] text-white/45 leading-relaxed">{item.deliverable}</div>
+                <div className="text-[14px] text-white/70 leading-relaxed">{item.deliverable}</div>
               </div>
             </motion.div>
           ))}

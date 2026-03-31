@@ -37,22 +37,22 @@ export default function BeninComparisonSlide() {
             transition={{ delay: 0.2 }}
             className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-lg p-6"
           >
-            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-white/40 mb-3">Benin · Completed Arc</div>
+            <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-white/80 mb-3">Benin · Completed Arc</div>
             <div className="flex items-end gap-2 mb-5">
               <div className="font-serif text-[52px] font-light text-white/45 leading-none">6</div>
-              <div className="font-mono text-[11px] uppercase text-white/25 mb-2 tracking-wide">years</div>
+              <div className="font-mono text-[22px] uppercase text-white/50 mb-2 tracking-wide">years</div>
             </div>
             <div className="space-y-2.5 mb-5">
               {beninSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="font-mono text-[9px] text-white/30 w-10">{step.year}</div>
+                  <div className="font-mono text-[18px] text-white/60 w-14">{step.year}</div>
                   <div className="w-1 h-1 rounded-full bg-white/20" />
                   <div className="text-[13px] text-white/50">{step.label}</div>
                 </div>
               ))}
             </div>
             <div className="pt-3 border-t border-white/[0.06]">
-              <div className="font-mono text-[9px] uppercase text-white/25 tracking-wider">Outcome: Catastrophic</div>
+              <div className="font-mono text-[18px] uppercase text-white/50 tracking-wider">Outcome: Catastrophic</div>
             </div>
           </motion.div>
 
@@ -68,22 +68,22 @@ export default function BeninComparisonSlide() {
             transition={{ delay: 0.3 }}
             className="flex-1 bg-amber/[0.06] border border-amber/20 border-l-[3px] border-l-amber rounded-r-lg p-6"
           >
-            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-amber mb-3">Togo · In Progress</div>
+            <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-amber-lt mb-3">Togo · In Progress</div>
             <div className="flex items-end gap-2 mb-5">
               <div className="font-serif text-[52px] font-light text-amber leading-none">?</div>
-              <div className="font-mono text-[11px] uppercase text-amber/40 mb-2 tracking-wide">years</div>
+              <div className="font-mono text-[22px] uppercase text-amber mb-2 tracking-wide">years</div>
             </div>
             <div className="space-y-2.5 mb-5">
               {togoSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className={`font-mono text-[9px] w-10 ${step.done ? 'text-amber/60' : 'text-amber/20'}`}>{step.year}</div>
+                  <div className={`font-mono text-[18px] w-14 ${step.done ? 'text-amber-lt' : 'text-amber/40'}`}>{step.year}</div>
                   <div className={`w-1 h-1 rounded-full ${step.done ? 'bg-amber' : 'bg-amber/20'}`} />
                   <div className={`text-[13px] ${step.done ? 'text-white/80' : 'text-white/25'}`}>{step.label}</div>
                 </div>
               ))}
             </div>
             <div className="pt-3 border-t border-amber/15">
-              <div className="font-mono text-[9px] uppercase text-amber tracking-wider">Trajectory: Faster</div>
+              <div className="font-mono text-[18px] uppercase text-amber-lt tracking-wider">Trajectory: Faster</div>
             </div>
           </motion.div>
         </div>
@@ -95,7 +95,7 @@ export default function BeninComparisonSlide() {
           transition={{ delay: 0.5 }}
           className="text-center py-4 px-6 bg-red/[0.08] border border-red/20 rounded"
         >
-          <span className="font-mono text-[11px] tracking-[0.12em] uppercase text-red">
+          <span className="font-mono text-[22px] tracking-[0.12em] uppercase text-red">
             If the pattern holds: 2026–2027
           </span>
         </motion.div>

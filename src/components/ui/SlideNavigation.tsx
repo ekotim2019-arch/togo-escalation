@@ -66,7 +66,7 @@ export default function SlideNavigation({
       </button>
 
       {/* Slide counter */}
-      <div className="absolute right-8 text-ash text-xs font-mono">
+      <div className="absolute right-8 text-ash text-[18px] font-mono">
         {String(current + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
       </div>
     </div>
