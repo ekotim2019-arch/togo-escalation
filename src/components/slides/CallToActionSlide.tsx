@@ -17,7 +17,7 @@ export default function CallToActionSlide() {
         </div>
 
         {/* Scenarios */}
-        <div className="flex flex-col gap-4 mb-12">
+        <div className="flex flex-col gap-5 mb-12">
           {/* Best Case */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

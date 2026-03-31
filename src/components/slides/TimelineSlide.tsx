@@ -96,7 +96,7 @@ export default function TimelineSlide() {
                     ? 'bg-amber/[0.06] border-l-[2px] border-amber/60'
                     : 'bg-white/[0.02] border-l-[2px] border-amber/30'
                 }`}>
-                  <div className={`font-mono text-[18px] tracking-[0.1em] uppercase mb-1 ${
+                  <div className={`font-mono text-[18px] tracking-[0.1em] uppercase mb-3 ${
                     event.highlight ? 'text-red' :
                     event.severity === 'critical' ? 'text-red' :
                     event.severity === 'current' ? 'text-amber-lt' : 'text-amber-lt'
@@ -104,7 +104,7 @@ export default function TimelineSlide() {
                     {event.label}
                     {event.highlight && <span className="ml-2 opacity-70">← February Offensive</span>}
                   </div>
-                  <div className="font-serif text-base text-white/75 leading-relaxed">
+                  <div className="font-serif text-[17px] text-white/85 leading-relaxed">
                     {event.text}
                   </div>
                 </div>

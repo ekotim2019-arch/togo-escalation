@@ -61,7 +61,7 @@ export default function RequirementsSlide() {
                 </div>
               </div>
               <div className="flex-1">
-                <div className="font-serif text-base text-white mb-1">{item.req}</div>
+                <div className="font-serif text-[18px] text-white mb-2">{item.req}</div>
                 <div className="text-[14px] text-white/70 leading-relaxed">{item.deliverable}</div>
               </div>
             </motion.div>

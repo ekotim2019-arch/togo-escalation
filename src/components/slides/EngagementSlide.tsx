@@ -37,7 +37,7 @@ export default function EngagementSlide() {
           <h2 className="font-serif text-[46px] font-light text-white">
             Alert <em className="italic text-amber-lt">Tiering</em>
           </h2>
-          <p className="text-[15px] text-white/40 mt-2">
+          <p className="text-[17px] text-white/65 mt-2">
             Three-tier system calibrated to decision timelines
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function EngagementSlide() {
 
                 <div className="flex-1">
                   <div className="font-mono text-[18px] uppercase tracking-[0.1em] text-white/60 mb-1.5">Trigger conditions</div>
-                  <div className="text-[14px] text-white/70 mb-3 leading-relaxed">{tier.trigger}</div>
+                  <div className="text-[16px] text-white/80 mb-3 leading-relaxed">{tier.trigger}</div>
                   <div className="font-mono text-[20px] text-white/70">{tier.format}</div>
                 </div>
               </motion.div>

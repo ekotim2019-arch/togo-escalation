@@ -62,7 +62,7 @@ export default function IntelCollapseSlide() {
           className="bg-red/[0.06] border border-red/15 rounded-md py-4 px-6 mb-8"
         >
           <div className="font-mono text-[18px] uppercase tracking-[0.12em] text-red mb-2">G5 Sahel Dissolution</div>
-          <p className="text-[14px] text-white/70 leading-relaxed">
+          <p className="text-[16px] text-white/80 leading-relaxed">
             AES states declared <span className="text-white">&ldquo;no intention to extend operations to coastal countries&rdquo;</span> — leaving Togo, Benin, and Ghana without credible intelligence partners in the Sahel.
           </p>
         </motion.div>

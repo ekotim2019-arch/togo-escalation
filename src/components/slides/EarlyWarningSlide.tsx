@@ -37,7 +37,7 @@ export default function EarlyWarningSlide() {
           <h2 className="font-serif text-[46px] font-light text-white">
             Early Warning <em className="italic text-amber-lt">Framework</em>
           </h2>
-          <p className="text-[15px] text-white/40 mt-2 font-light">
+          <p className="text-[17px] text-white/65 mt-2 font-light">
             Structured indicators with validated lead times from operational deployments
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function EarlyWarningSlide() {
               </div>
 
               {/* Description */}
-              <p className="text-[13px] text-white/60 leading-relaxed mb-4 flex-1">
+              <p className="text-[15px] text-white/80 leading-relaxed mb-4 flex-1">
                 {ind.description}
               </p>
 

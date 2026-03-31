@@ -42,12 +42,12 @@ export default function BeninComparisonSlide() {
               <div className="font-serif text-[52px] font-light text-white/45 leading-none">6</div>
               <div className="font-mono text-[22px] uppercase text-white/50 mb-2 tracking-wide">years</div>
             </div>
-            <div className="space-y-2.5 mb-5">
+            <div className="space-y-4 mb-5">
               {beninSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="font-mono text-[18px] text-white/60 w-14">{step.year}</div>
                   <div className="w-1 h-1 rounded-full bg-white/20" />
-                  <div className="text-[13px] text-white/50">{step.label}</div>
+                  <div className="text-[15px] text-white/70">{step.label}</div>
                 </div>
               ))}
             </div>
@@ -73,12 +73,12 @@ export default function BeninComparisonSlide() {
               <div className="font-serif text-[52px] font-light text-amber leading-none">?</div>
               <div className="font-mono text-[22px] uppercase text-amber mb-2 tracking-wide">years</div>
             </div>
-            <div className="space-y-2.5 mb-5">
+            <div className="space-y-4 mb-5">
               {togoSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className={`font-mono text-[18px] w-14 ${step.done ? 'text-amber-lt' : 'text-amber/40'}`}>{step.year}</div>
                   <div className={`w-1 h-1 rounded-full ${step.done ? 'bg-amber' : 'bg-amber/20'}`} />
-                  <div className={`text-[13px] ${step.done ? 'text-white/80' : 'text-white/25'}`}>{step.label}</div>
+                  <div className={`text-[15px] ${step.done ? 'text-white/85' : 'text-white/30'}`}>{step.label}</div>
                 </div>
               ))}
             </div>
