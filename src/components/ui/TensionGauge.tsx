@@ -107,7 +107,7 @@ export default function TensionGauge({
           fill="#F5F3EE"
           fontSize={size * 0.18}
           fontWeight="700"
-          fontFamily="Inter"
+          fontFamily="'Cormorant Garamond', Georgia, serif"
         >
           {value}
         </text>
@@ -116,14 +116,14 @@ export default function TensionGauge({
           y={cy - 12}
           textAnchor="middle"
           fill="#9A9A8E"
-          fontSize={size * 0.08}
-          fontFamily="Inter"
+          fontSize={size * 0.07}
+          fontFamily="'DM Mono', 'Courier New', monospace"
         >
           / {max}
         </text>
         {/* Min/Max labels */}
-        <text x={polarToCartesian(startAngle).x} y={polarToCartesian(startAngle).y + 16} textAnchor="middle" fill="#9A9A8E" fontSize={size * 0.07} fontFamily="Inter">0</text>
-        <text x={polarToCartesian(endAngle).x} y={polarToCartesian(endAngle).y + 16} textAnchor="middle" fill="#9A9A8E" fontSize={size * 0.07} fontFamily="Inter">{max}</text>
+        <text x={polarToCartesian(startAngle).x} y={polarToCartesian(startAngle).y + 16} textAnchor="middle" fill="#9A9A8E" fontSize={size * 0.065} fontFamily="'DM Mono', 'Courier New', monospace">0</text>
+        <text x={polarToCartesian(endAngle).x} y={polarToCartesian(endAngle).y + 16} textAnchor="middle" fill="#9A9A8E" fontSize={size * 0.065} fontFamily="'DM Mono', 'Courier New', monospace">{max}</text>
       </svg>
       <div className="text-center -mt-2">
         <div className="text-ash text-sm tracking-widest uppercase">{label}</div>

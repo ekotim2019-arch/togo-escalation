@@ -4,15 +4,13 @@ import { useState, useEffect, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import SlideNavigation from './ui/SlideNavigation'
 
-// Slide imports
 import TitleSlide from './slides/TitleSlide'
+import TensionScoreSlide from './slides/TensionScoreSlide'
 import CrisisSlide from './slides/CrisisSlide'
 import DiapagaMapSlide from './slides/DiapagaMapSlide'
 import TimelineSlide from './slides/TimelineSlide'
 import BeninComparisonSlide from './slides/BeninComparisonSlide'
-import TacticalEvolutionSlide from './slides/TacticalEvolutionSlide'
 import IntelCollapseSlide from './slides/IntelCollapseSlide'
-import InformationBlackoutSlide from './slides/InformationBlackoutSlide'
 import KairosArcDifferenceSlide from './slides/KairosArcDifferenceSlide'
 import LeadTimeSlide from './slides/LeadTimeSlide'
 import EarlyWarningSlide from './slides/EarlyWarningSlide'
@@ -23,13 +21,12 @@ import ClosingSlide from './slides/ClosingSlide'
 
 const slides = [
   TitleSlide,
+  TensionScoreSlide,
   CrisisSlide,
   DiapagaMapSlide,
   TimelineSlide,
   BeninComparisonSlide,
-  TacticalEvolutionSlide,
   IntelCollapseSlide,
-  InformationBlackoutSlide,
   KairosArcDifferenceSlide,
   LeadTimeSlide,
   EarlyWarningSlide,
@@ -95,12 +92,12 @@ export default function Presentation() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-slate slide-container">
-      {/* Subtle scan line effect */}
-      <div className="absolute inset-0 pointer-events-none z-10 opacity-[0.02]">
-        <div className="absolute inset-0" style={{
+      {/* Subtle scan line overlay */}
+      <div className="absolute inset-0 pointer-events-none z-10 opacity-[0.02]"
+        style={{
           backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px)',
-        }} />
-      </div>
+        }}
+      />
 
       <AnimatePresence initial={false} custom={direction} mode="wait">
         <motion.div

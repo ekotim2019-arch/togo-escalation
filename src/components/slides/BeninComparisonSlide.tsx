@@ -1,72 +1,105 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
-import ComparisonChart from '@/components/ui/ComparisonChart'
-import { beninComparison } from '@/lib/data'
+import { motion } from 'framer-motion';
+import { SlideWrapper } from '../SlideWrapper';
+import { Eyebrow } from '../Eyebrow';
+
+const beninSteps = [
+  { year: '2019', label: 'First incursion' },
+  { year: '2021', label: 'Pattern established' },
+  { year: '2023', label: 'Territorial gains' },
+  { year: '2025', label: 'Governance structures' },
+];
+
+const togoSteps = [
+  { year: '2021', label: 'First incursion', done: true },
+  { year: '2023', label: 'Pattern established', done: true },
+  { year: '2025', label: 'FOB operational (Diapaga)', done: true },
+  { year: '?', label: 'Territorial gains', done: false },
+];
 
 export default function BeninComparisonSlide() {
   return (
-    <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink">
-      {/* Header */}
-      <motion.div
-        className="px-16 pt-10 pb-4 shrink-0"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 02 — The Benin Precedent</div>
-        <h2 className="slide-title text-paper">A Pattern That Repeats</h2>
-        <div className="accent-line mt-3" />
-      </motion.div>
+    <SlideWrapper>
+      <div className="relative z-10 w-full max-w-[780px]">
+        <div className="text-center mb-10">
+          <Eyebrow color="red">Regional Pattern Analysis</Eyebrow>
+          <h2 className="font-serif text-5xl font-light text-white">
+            The Benin <em className="italic text-amber-lt">Precedent</em>
+          </h2>
+        </div>
 
-      <div className="flex-1 flex flex-col px-16 pb-12 gap-6 min-h-0">
-        {/* Column headers */}
-        <motion.div
-          className="grid grid-cols-[120px_1fr_1fr] gap-3"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          <div />
-          <div className="text-center">
-            <span className="text-amber text-sm font-black tracking-widest uppercase">Benin</span>
-            <div className="text-ash text-xs mt-1">{beninComparison.beninNote}</div>
-          </div>
-          <div className="text-center">
-            <span className="text-threat-elevated text-sm font-black tracking-widest uppercase">Togo</span>
-            <div className="text-ash text-xs mt-1">{beninComparison.togoNote}</div>
-          </div>
-        </motion.div>
+        <div className="flex gap-5 mb-8">
+          {/* Benin card */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-lg p-6"
+          >
+            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-white/40 mb-3">Benin · Completed Arc</div>
+            <div className="flex items-end gap-2 mb-5">
+              <div className="font-serif text-[52px] font-light text-white/45 leading-none">6</div>
+              <div className="font-mono text-[11px] uppercase text-white/25 mb-2 tracking-wide">years</div>
+            </div>
+            <div className="space-y-2.5 mb-5">
+              {beninSteps.map((step, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <div className="font-mono text-[9px] text-white/30 w-10">{step.year}</div>
+                  <div className="w-1 h-1 rounded-full bg-white/20" />
+                  <div className="text-[13px] text-white/50">{step.label}</div>
+                </div>
+              ))}
+            </div>
+            <div className="pt-3 border-t border-white/[0.06]">
+              <div className="font-mono text-[9px] uppercase text-white/25 tracking-wider">Outcome: Catastrophic</div>
+            </div>
+          </motion.div>
 
-        {/* Comparison chart */}
-        <motion.div
-          className="flex-1"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          <ComparisonChart />
-        </motion.div>
+          {/* Divider arrow */}
+          <div className="flex items-center">
+            <div className="font-serif text-2xl text-amber/25">→</div>
+          </div>
+
+          {/* Togo card */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex-1 bg-amber/[0.06] border border-amber/20 border-l-[3px] border-l-amber rounded-r-lg p-6"
+          >
+            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-amber mb-3">Togo · In Progress</div>
+            <div className="flex items-end gap-2 mb-5">
+              <div className="font-serif text-[52px] font-light text-amber leading-none">?</div>
+              <div className="font-mono text-[11px] uppercase text-amber/40 mb-2 tracking-wide">years</div>
+            </div>
+            <div className="space-y-2.5 mb-5">
+              {togoSteps.map((step, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <div className={`font-mono text-[9px] w-10 ${step.done ? 'text-amber/60' : 'text-amber/20'}`}>{step.year}</div>
+                  <div className={`w-1 h-1 rounded-full ${step.done ? 'bg-amber' : 'bg-amber/20'}`} />
+                  <div className={`text-[13px] ${step.done ? 'text-white/80' : 'text-white/25'}`}>{step.label}</div>
+                </div>
+              ))}
+            </div>
+            <div className="pt-3 border-t border-amber/15">
+              <div className="font-mono text-[9px] uppercase text-amber tracking-wider">Trajectory: Faster</div>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Warning box */}
         <motion.div
-          className="card-danger flex items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0 }}
+          transition={{ delay: 0.5 }}
+          className="text-center py-4 px-6 bg-red/[0.08] border border-red/20 rounded"
         >
-          <div className="relative shrink-0">
-            <div className="w-4 h-4 rounded-full bg-threat-critical" />
-            <div className="absolute inset-0 w-4 h-4 rounded-full bg-threat-critical animate-ping opacity-60" />
-          </div>
-          <div>
-            <div className="text-threat-critical font-black text-sm tracking-wide">WARNING: Pattern Convergence</div>
-            <div className="text-paper/80 text-sm mt-1">
-              {beninComparison.warning} — <span className="text-threat-critical font-bold">Togo is in the escalation phase now.</span> The window for effective pre-emptive action is narrowing.
-            </div>
-          </div>
+          <span className="font-mono text-[11px] tracking-[0.12em] uppercase text-red">
+            If the pattern holds: 2026–2027
+          </span>
         </motion.div>
       </div>
-    </div>
-  )
+    </SlideWrapper>
+  );
 }

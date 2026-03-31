@@ -43,7 +43,7 @@ export default function TacticalEvolutionSlide() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 02 — Tactical Evolution</div>
+        <div className="eyebrow mb-4">Section 02 — Tactical Evolution</div>
         <h2 className="slide-title text-paper">JNIM is Adapting</h2>
         <div className="accent-line mt-3" />
       </motion.div>

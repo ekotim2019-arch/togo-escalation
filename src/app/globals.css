@@ -1,16 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Sans:wght@400;500&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+
+  /* Brand colors — single values (not scales) */
+  --color-slate: #1C2B3A;
+  --color-amber: #C4892A;
+  --color-amber-lt: #E8B85A;
+  --color-amber-dim: #8A5E18;
+  --color-ink: #0D0D0B;
+  --color-red: #8B1A1A;
+  --color-white: #FDFCF9;
+  --color-paper: #F5F3EE;
+  --color-ash: #9A9A8E;
+}
 
 :root {
   --slate: #1C2B3A;
   --amber: #C4892A;
+  --amber-lt: #E8B85A;
+  --amber-dim: #8A5E18;
   --ink: #0D0D0B;
+  --red: #8B1A1A;
   --paper: #F5F3EE;
+  --white: #FDFCF9;
   --ash: #9A9A8E;
-  --threat-critical: #DC2626;
-  --threat-elevated: #F59E0B;
-  --threat-moderate: #EAB308;
-  --threat-low: #22C55E;
 }
 
 * {
@@ -26,120 +45,41 @@ body {
   height: 100%;
   width: 100%;
   background-color: #1C2B3A;
-  color: #F5F3EE;
-  font-family: 'Inter', system-ui, sans-serif;
+  color: #FDFCF9;
+  font-family: 'Instrument Sans', system-ui, sans-serif;
 }
 
-.leaflet-container {
-  background: #263a4d;
-  font-family: 'Inter', system-ui, sans-serif;
+/* =========================================
+   GRID BACKGROUND (used by SlideWrapper)
+   ========================================= */
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(196,137,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,137,42,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-/* Removed dark filter — using Voyager (light) tiles now */
-.leaflet-tile-pane {
-  filter: none;
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1C2B3A;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #C4892A;
-  border-radius: 2px;
+.animate-pulse-slow {
+  animation: pulse-slow 2s infinite;
 }
 
 .slide-container {
   user-select: none;
 }
 
-@keyframes threat-pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 20px rgba(220, 38, 38, 0);
-  }
-}
-
-.threat-pulse {
-  animation: threat-pulse 2s ease-in-out infinite;
-}
-
 /* =========================================
-   TYPOGRAPHY UTILITIES
+   LEGACY CLASSES (used by SlideNavigation)
    ========================================= */
-
-.text-glow {
-  text-shadow: 0 0 60px rgba(196, 137, 42, 0.6), 0 0 120px rgba(196, 137, 42, 0.3);
-}
-
-.text-glow-red {
-  text-shadow: 0 0 60px rgba(220, 38, 38, 0.6), 0 0 120px rgba(220, 38, 38, 0.3);
-}
-
-.text-glow-subtle {
-  text-shadow: 0 0 30px rgba(196, 137, 42, 0.3);
-}
-
-/* Hero numbers: 420, 60+, 7.5 */
-.hero-number {
-  font-size: clamp(6rem, 16vw, 18rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-/* Slide main title */
-.slide-title {
-  font-size: clamp(2.2rem, 5.5vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-}
-
-/* =========================================
-   CARD COMPONENTS
-   ========================================= */
-
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  padding: 2rem;
-}
-
-.card-highlight {
-  background: rgba(196, 137, 42, 0.1);
-  border: 1px solid rgba(196, 137, 42, 0.3);
-  border-left: 4px solid #C4892A;
-  border-radius: 1rem;
-  padding: 1.5rem 2rem;
-}
-
-.card-danger {
-  background: rgba(220, 38, 38, 0.1);
-  border: 1px solid rgba(220, 38, 38, 0.35);
-  border-radius: 1rem;
-  padding: 1.5rem;
-}
-
-/* =========================================
-   ACCENT ELEMENTS
-   ========================================= */
-
-.accent-line {
-  height: 3px;
-  width: 4rem;
-  background: linear-gradient(to right, #C4892A, rgba(196, 137, 42, 0.4));
-  border-radius: 9999px;
-}
 
 .accent-line-wide {
   height: 1px;
@@ -147,35 +87,10 @@ body {
   background: linear-gradient(to right, transparent, #C4892A, transparent);
 }
 
-.accent-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #C4892A;
-  box-shadow: 0 0 12px rgba(196, 137, 42, 0.8);
-}
-
-/* =========================================
-   GLOW EFFECTS
-   ========================================= */
-
-.glow-amber {
-  box-shadow: 0 0 80px rgba(196, 137, 42, 0.2), 0 0 160px rgba(196, 137, 42, 0.1);
-}
-
-.glow-red {
-  box-shadow: 0 0 80px rgba(220, 38, 38, 0.2), 0 0 160px rgba(220, 38, 38, 0.1);
-}
-
-.shadow-dramatic {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
-
-/* Radial background glows */
 .bg-glow-amber {
   background: radial-gradient(ellipse at center, rgba(196, 137, 42, 0.12) 0%, transparent 70%);
 }
 
 .bg-glow-red {
-  background: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(139, 26, 26, 0.12) 0%, transparent 70%);
 }

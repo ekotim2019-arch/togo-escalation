@@ -26,7 +26,7 @@ export default function InformationBlackoutSlide() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 03 — Information Blackout</div>
+        <div className="eyebrow mb-4">Section 03 — Information Blackout</div>
         <h2 className="slide-title text-paper">What You Don&rsquo;t Know <span className="text-threat-critical">CAN</span> Hurt You</h2>
         <div className="accent-line mt-3" />
       </motion.div>

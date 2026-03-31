@@ -1,123 +1,102 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
-import { BRAND } from '@/lib/constants'
+import { motion } from 'framer-motion';
+import { SlideWrapper } from '../SlideWrapper';
+import { Eyebrow } from '../Eyebrow';
 
-const alertTiers = [
+const tiers = [
   {
     level: 'FLASH',
-    color: '#DC2626',
-    dot: 'bg-threat-critical',
-    time: '≤ 2 hours',
-    desc: 'Imminent threat to life or critical infrastructure. Immediate action required.',
-    examples: ['Armed group breach of 15km buffer zone', 'Confirmed attack in Kpendjal-Ouest', 'Mass casualty event detected'],
+    color: 'red',
+    timeframe: '2 hours',
+    trigger: 'Mass-casualty event / Confirmed cross-border incursion / FOB expansion detected',
+    format: 'Voice + written alert to designated contact',
   },
   {
     level: 'PRIORITY',
-    color: '#F59E0B',
-    dot: 'bg-threat-elevated',
-    time: '≤ 24 hours',
-    desc: 'Significant threat development requiring near-term response.',
-    examples: ['Tripwire threshold triggered (3+ indicators)', 'Key commander movement', 'Cross-border incursion pattern'],
+    color: 'amber',
+    timeframe: '24 hours',
+    trigger: 'Coordinated attack series / Displacement spike / Command network activation',
+    format: 'Encrypted written brief with assessment and recommendations',
   },
   {
     level: 'ROUTINE',
-    color: '#22C55E',
-    dot: 'bg-threat-low',
-    time: 'Scheduled',
-    desc: 'Ongoing monitoring updates and trend analysis.',
-    examples: ['Daily indicator dashboard', 'Weekly situation report', 'Monthly strategic assessment'],
+    color: 'muted',
+    timeframe: 'Scheduled',
+    trigger: 'Weekly digest · Monthly assessment · Quarterly strategic review',
+    format: 'Structured report with trend analysis and 30-day outlook',
   },
-]
-
-const deliverables = [
-  { freq: 'Daily', items: ['Indicator status dashboard', 'Incident log update', 'Flash/Priority alerts (as needed)'] },
-  { freq: 'Weekly', items: ['Border corridor situation report', 'Trend analysis brief', 'Key actor activity summary'] },
-  { freq: 'Monthly', items: ['Comprehensive threat assessment', 'Scenario probability update', 'Capacity support module'] },
-  { freq: 'Quarterly', items: ['Strategic forecast (6-month horizon)', 'Methodology review', 'Client debrief and Q&A'] },
-]
+];
 
 export default function EngagementSlide() {
   return (
-    <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink relative overflow-hidden">
-      {/* Subtle amber glow */}
-      <div className="absolute inset-0 pointer-events-none bg-glow-amber opacity-50" />
-
-      {/* Header */}
-      <motion.div
-        className="px-16 pt-10 pb-4 shrink-0 relative z-10"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 05 — Engagement Model</div>
-        <h2 className="slide-title text-paper">{BRAND.name} Delivery Framework</h2>
-        <div className="accent-line mt-3" />
-      </motion.div>
-
-      <div className="flex-1 flex gap-6 px-16 pb-12 min-h-0 relative z-10">
-        {/* Alert tiers */}
-        <div className="flex-1 flex flex-col gap-3">
-          <div className="text-ash text-xs font-black tracking-widest uppercase mb-1">Alert Tiering</div>
-          {alertTiers.map((tier, i) => (
-            <motion.div
-              key={tier.level}
-              className="flex-1 rounded-2xl p-5 border"
-              style={{ borderColor: `${tier.color}30`, backgroundColor: `${tier.color}08` }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 + i * 0.1 }}
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="relative w-3 h-3 shrink-0">
-                  <div className={`w-3 h-3 rounded-full ${tier.dot}`} />
-                  {i === 0 && <div className={`absolute inset-0 w-3 h-3 rounded-full ${tier.dot} animate-ping opacity-60`} />}
-                </div>
-                <span className="font-black text-sm tracking-widest" style={{ color: tier.color }}>{tier.level}</span>
-                <span className="text-ash text-xs ml-auto font-mono font-bold">{tier.time}</span>
-              </div>
-              <p className="text-paper/70 text-xs mb-2">{tier.desc}</p>
-              <div className="space-y-0.5">
-                {tier.examples.map((ex, j) => (
-                  <div key={j} className="text-xs text-ash flex gap-2">
-                    <span style={{ color: tier.color }}>·</span> {ex}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+    <SlideWrapper className="p-8">
+      <div className="w-full max-w-4xl">
+        <div className="mb-8">
+          <Eyebrow>Engagement Model</Eyebrow>
+          <h2 className="font-serif text-[46px] font-light text-white">
+            Alert <em className="italic text-amber-lt">Tiering</em>
+          </h2>
+          <p className="text-[15px] text-white/40 mt-2">
+            Three-tier system calibrated to decision timelines
+          </p>
         </div>
 
-        {/* Deliverables */}
-        <motion.div
-          className="w-72 shrink-0"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          <div className="text-ash text-xs font-black tracking-widest uppercase mb-3">Deliverables Schedule</div>
-          <div className="space-y-3">
-            {deliverables.map((d, i) => (
+        <div className="flex flex-col gap-4">
+          {tiers.map((tier, i) => {
+            const isRed = tier.color === 'red';
+            const isAmber = tier.color === 'amber';
+
+            return (
               <motion.div
-                key={d.freq}
-                className="bg-white/[0.03] border border-white/10 rounded-2xl p-4"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + i * 0.08 }}
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 + i * 0.15 }}
+                className={`flex items-start gap-6 p-5 border border-l-[3px] rounded-r-lg ${
+                  isRed
+                    ? 'bg-red/[0.06] border-red/20 border-l-red'
+                    : isAmber
+                    ? 'bg-amber/[0.05] border-amber/15 border-l-amber'
+                    : 'bg-white/[0.02] border-white/[0.07] border-l-white/20'
+                }`}
               >
-                <div className="text-amber text-xs font-black tracking-widest uppercase mb-2">{d.freq}</div>
-                <ul className="space-y-1">
-                  {d.items.map((item, j) => (
-                    <li key={j} className="flex gap-2 text-paper/70 text-xs">
-                      <span className="text-amber/60 shrink-0">→</span> {item}
-                    </li>
-                  ))}
-                </ul>
+                {/* Level + timeframe */}
+                <div className="w-32 shrink-0">
+                  <div className={`font-mono text-[13px] tracking-[0.12em] uppercase font-medium ${
+                    isRed ? 'text-red' : isAmber ? 'text-amber' : 'text-white/40'
+                  }`}>
+                    {tier.level}
+                  </div>
+                  <div className={`font-serif text-2xl font-light mt-1 ${
+                    isRed ? 'text-red' : isAmber ? 'text-amber' : 'text-white/30'
+                  }`}>
+                    {tier.timeframe}
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div className="font-mono text-[9px] uppercase tracking-[0.1em] text-white/30 mb-1.5">Trigger conditions</div>
+                  <div className="text-[14px] text-white/70 mb-3 leading-relaxed">{tier.trigger}</div>
+                  <div className="font-mono text-[10px] text-white/35">{tier.format}</div>
+                </div>
               </motion.div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom note */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+          className="mt-6 text-center"
+        >
+          <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-white/25">
+            All deliverables encrypted · Chain of custody documented · Analyst available for debrief
+          </span>
         </motion.div>
       </div>
-    </div>
-  )
+    </SlideWrapper>
+  );
 }

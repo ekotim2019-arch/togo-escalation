@@ -1,105 +1,73 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { requirements } from '@/lib/data'
-import { BRAND } from '@/lib/constants'
+import { motion } from 'framer-motion';
+import { SlideWrapper } from '../SlideWrapper';
+import { Eyebrow } from '../Eyebrow';
+
+const requirements = [
+  {
+    req: 'Threat Mapping & Pattern Analysis',
+    deliverable: 'Monthly geospatial threat maps with JNIM activity overlays and trend analysis',
+  },
+  {
+    req: 'Human Terrain & Network Intelligence',
+    deliverable: 'Quarterly actor profiles: commanders, financial networks, recruitment patterns',
+  },
+  {
+    req: 'Early Warning Indicators',
+    deliverable: 'Structured indicator dashboard with tripwire thresholds and alert triggers',
+  },
+  {
+    req: 'Cross-border Monitoring',
+    deliverable: 'Real-time coverage of Kpendjal, Kpendjal-Ouest, and Cinkassé corridor',
+  },
+  {
+    req: 'Strategic Assessments',
+    deliverable: 'Bi-annual 12-month outlook with scenario probabilities and recommended actions',
+  },
+  {
+    req: 'Capacity Support',
+    deliverable: 'Analytical framework training and structured methodology transfer',
+  },
+];
 
 export default function RequirementsSlide() {
-  const [hovered, setHovered] = useState<number | null>(null)
-
   return (
-    <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink relative overflow-hidden">
-      {/* Subtle amber glow */}
-      <div className="absolute inset-0 pointer-events-none bg-glow-amber opacity-50" />
+    <SlideWrapper className="p-8">
+      <div className="w-full max-w-5xl">
+        <div className="mb-8">
+          <Eyebrow>Capability Match</Eyebrow>
+          <h2 className="font-serif text-[46px] font-light text-white">
+            Meeting Your <em className="italic text-amber-lt">Six Requirements</em>
+          </h2>
+        </div>
 
-      {/* Header */}
-      <motion.div
-        className="px-16 pt-10 pb-4 shrink-0 relative z-10"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="text-amber text-xs font-mono tracking-widest uppercase mb-2">Section 05 — The Engagement</div>
-        <h2 className="slide-title text-paper">Meeting Your Six Requirements</h2>
-        <div className="accent-line mt-3" />
-      </motion.div>
-
-      <div className="flex-1 px-16 pb-12 grid grid-cols-2 gap-4 min-h-0 relative z-10">
-        {requirements.map((req, i) => (
-          <motion.div
-            key={req.number}
-            className={`relative rounded-2xl border cursor-pointer transition-all overflow-hidden ${
-              hovered === i
-                ? 'bg-amber/10 border-amber/50'
-                : 'bg-white/[0.03] border-white/10 hover:border-white/20'
-            }`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 + i * 0.08 }}
-            onMouseEnter={() => setHovered(i)}
-            onMouseLeave={() => setHovered(null)}
-          >
-            <div className="p-6">
-              {/* Checkmark + title */}
-              <div className="flex items-start gap-3 mb-3">
-                <motion.div
-                  className={`w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 mt-0.5 ${
-                    hovered === i ? 'border-amber bg-amber/20' : 'border-ash/40'
-                  }`}
-                  animate={{ borderColor: hovered === i ? '#C4892A' : '#9A9A8E66' }}
-                >
-                  <motion.svg
-                    className={`w-3.5 h-3.5 ${hovered === i ? 'text-amber' : 'text-ash/60'}`}
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: hovered === i ? 1 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <motion.path
-                      d="M2 6L5 9L10 3"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </motion.svg>
-                </motion.div>
-                <div>
-                  <div className="text-ash text-xs font-mono mb-0.5">REQ {String(req.number).padStart(2, '0')}</div>
-                  <div className={`font-black text-sm ${hovered === i ? 'text-amber' : 'text-paper'}`}>
-                    {req.title}
-                  </div>
+        <div className="flex flex-col gap-3">
+          {requirements.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.15 + i * 0.1 }}
+              className="flex items-start gap-5 py-4 px-5 bg-white/[0.02] border border-white/[0.07] rounded-md"
+            >
+              {/* Number + checkmark */}
+              <div className="w-10 shrink-0 flex flex-col items-center gap-1 pt-0.5">
+                <div className="font-mono text-[10px] text-white/25">{String(i + 1).padStart(2, '0')}</div>
+                <div className="w-5 h-5 rounded-full bg-amber/[0.12] border border-amber/30 flex items-center justify-center">
+                  <svg viewBox="0 0 12 12" className="w-3 h-3">
+                    <path d="M2 6l3 3 5-5" stroke="#C4892A" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </div>
               </div>
-
-              {/* Deliverables */}
-              <AnimatePresence>
-                {hovered === i && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.25 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="text-ash text-xs font-black tracking-widest uppercase mb-2">{BRAND.name} Delivers:</div>
-                    <ul className="space-y-1">
-                      {req.deliverables.map((d, j) => (
-                        <li key={j} className="flex gap-2 text-paper/70 text-xs">
-                          <span className="text-amber shrink-0">✓</span>
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </motion.div>
-        ))}
+              <div className="flex-1">
+                <div className="font-serif text-base text-white mb-1">{item.req}</div>
+                <div className="text-[12px] text-white/45 leading-relaxed">{item.deliverable}</div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  )
+    </SlideWrapper>
+  );
 }
