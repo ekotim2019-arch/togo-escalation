@@ -42,29 +42,29 @@ export default function EarlyWarningSlide() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-3 gap-7">
           {indicators.map((ind, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + i * 0.1 }}
-              className={`flex flex-col p-6 rounded-lg border ${
+              className={`flex flex-col p-8 rounded-lg border ${
                 ind.color === 'red'
                   ? 'bg-red/[0.06] border-red/20 border-l-[3px] border-l-red rounded-l-none'
                   : 'bg-amber/[0.05] border-amber/15'
               }`}
             >
               {/* Lead time */}
-              <div className={`font-serif text-[40px] font-light leading-none mb-1 ${ind.color === 'red' ? 'text-red' : 'text-amber'}`}>
+              <div className={`font-serif text-[40px] font-light leading-none mb-3 ${ind.color === 'red' ? 'text-red' : 'text-amber'}`}>
                 {ind.lead}
               </div>
-              <div className={`font-mono text-[18px] uppercase tracking-[0.12em] mb-4 ${ind.color === 'red' ? 'text-red' : 'text-amber-lt'}`}>
+              <div className={`font-mono text-[18px] uppercase tracking-[0.12em] mb-6 ${ind.color === 'red' ? 'text-red font-bold' : 'text-amber-lt'}`}>
                 advance warning
               </div>
 
               {/* Title */}
-              <div className="font-serif text-lg text-white mb-3">
+              <div className="font-serif text-lg text-white mb-4">
                 {ind.title}
               </div>
 
@@ -74,7 +74,7 @@ export default function EarlyWarningSlide() {
               </p>
 
               {/* Examples */}
-              <div className="space-y-1.5 pt-3 border-t border-white/[0.06]">
+              <div className="space-y-3 pt-4 border-t border-white/[0.06]">
                 {ind.examples.map((ex, j) => (
                   <div key={j} className="flex items-center gap-2">
                     <div className={`w-1 h-1 rounded-full ${ind.color === 'red' ? 'bg-red/50' : 'bg-amber/50'}`} />

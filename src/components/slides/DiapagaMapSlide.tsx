@@ -205,15 +205,15 @@ export default function DiapagaMapSlide() {
             {/* Active threat badge overlay */}
             <div className="absolute top-3 right-3 flex items-center gap-2 bg-slate/95 px-3 py-1.5 rounded border border-red/30">
               <div className="w-1.5 h-1.5 bg-red rounded-full animate-pulse-slow" />
-              <span className="font-mono text-[18px] tracking-[0.1em] uppercase text-red">Active threat zone</span>
+              <span className="font-mono text-[18px] tracking-[0.1em] uppercase text-red font-bold">Active threat zone</span>
             </div>
           </div>
 
           {/* Info Panel */}
-          <div className="w-[230px] flex flex-col gap-4">
+          <div className="w-[230px] flex flex-col gap-6">
             {/* Key stat */}
             <div className="bg-red/10 border-l-[3px] border-red rounded-r-md p-4">
-              <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-red mb-2">
+              <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-red font-bold mb-2">
                 Threat Proximity
               </div>
               <div className="font-serif text-5xl font-light text-red leading-none">
@@ -246,7 +246,7 @@ export default function DiapagaMapSlide() {
 
             {/* N18 risk */}
             <div className="bg-red/[0.05] border border-red/15 rounded-md p-4">
-              <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-red mb-2">
+              <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-red font-bold mb-2">
                 N18 Corridor
               </div>
               <div className="text-[14px] text-white/70 leading-relaxed">

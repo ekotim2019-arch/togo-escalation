@@ -65,10 +65,10 @@ export default function CallToActionSlide() {
           >
             <div className="w-20 flex flex-col items-center justify-center">
               <div className="font-serif text-[42px] font-light text-red leading-none">25</div>
-              <div className="font-mono text-[20px] text-red">%</div>
+              <div className="font-mono text-[20px] text-red font-bold">%</div>
             </div>
             <div className="flex-1 bg-red/[0.06] border border-red/20 border-l-[3px] border-l-red rounded-r-md p-5">
-              <div className="font-mono text-[20px] tracking-[0.1em] uppercase text-red mb-2">Worst Case</div>
+              <div className="font-mono text-[20px] tracking-[0.1em] uppercase text-red font-bold mb-2">Worst Case</div>
               <div className="font-serif text-xl text-white/85 leading-relaxed">
                 Mass-casualty event (<span className="text-red">30+ KIA single incident</span>). JNIM establishes governance structures in Togolese territory. Regional contagion accelerates.
               </div>

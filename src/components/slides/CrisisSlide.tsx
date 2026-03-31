@@ -50,7 +50,7 @@ export default function CrisisSlide() {
           transition={{ delay: 0.6 }}
           className="inline-block py-5 px-8 bg-red/[0.08] border-l-[3px] border-red rounded-r text-left max-w-[480px]"
         >
-          <div className="font-mono text-[18px] tracking-[0.12em] uppercase text-red mb-2">
+          <div className="font-mono text-[18px] tracking-[0.12em] uppercase text-red font-bold mb-2">
             February 2026 Offensive
           </div>
           <div className="font-serif text-lg text-white/85 leading-relaxed">

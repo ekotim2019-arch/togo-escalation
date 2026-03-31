@@ -93,9 +93,9 @@ export default function BeninComparisonSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="text-center py-4 px-6 bg-red/[0.08] border border-red/20 rounded"
+          className="text-center py-6 px-6 bg-red/[0.08] border border-red/20 rounded mt-2"
         >
-          <span className="font-mono text-[22px] tracking-[0.12em] uppercase text-red">
+          <span className="font-mono text-[22px] tracking-[0.12em] uppercase text-red font-bold">
             If the pattern holds: 2026–2027
           </span>
         </motion.div>
