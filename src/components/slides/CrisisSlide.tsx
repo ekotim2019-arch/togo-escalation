@@ -48,7 +48,7 @@ export default function CrisisSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="inline-block py-5 px-8 bg-red/[0.08] border-l-[3px] border-red rounded-r text-left max-w-[480px]"
+          className="inline-block py-10 px-16 bg-red/[0.08] border-l-[3px] border-red rounded-r text-left max-w-[480px]"
         >
           <div className="font-mono text-[18px] tracking-[0.12em] uppercase text-red font-bold mb-2">
             February 2026 Offensive

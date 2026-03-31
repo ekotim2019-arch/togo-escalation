@@ -72,7 +72,7 @@ export default function TimelineSlide() {
                 className="flex items-start gap-6"
               >
                 {/* Date */}
-                <div className="w-[108px] shrink-0 text-right pt-2">
+                <div className="w-[108px] shrink-0 text-right pt-4">
                   <span className="font-mono text-[20px] tracking-[0.1em] uppercase text-white/80">
                     {event.date}
                   </span>
@@ -87,7 +87,7 @@ export default function TimelineSlide() {
                 </div>
 
                 {/* Content */}
-                <div className={`flex-1 py-3 px-4 rounded-r ${
+                <div className={`flex-1 py-6 px-8 rounded-r ${
                   event.highlight
                     ? 'bg-red/[0.08] border-l-[3px] border-red'
                     : event.severity === 'critical'

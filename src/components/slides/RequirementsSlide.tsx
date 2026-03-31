@@ -49,7 +49,7 @@ export default function RequirementsSlide() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.15 + i * 0.1 }}
-              className="flex items-start gap-5 py-5 px-5 bg-white/[0.02] border border-white/[0.07] rounded-md"
+              className="flex items-start gap-5 py-10 px-10 bg-white/[0.02] border border-white/[0.07] rounded-md"
             >
               {/* Number + checkmark */}
               <div className="w-10 shrink-0 flex flex-col items-center gap-1 pt-0.5">

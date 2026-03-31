@@ -22,20 +22,20 @@ export default function IntelCollapseSlide() {
           transition={{ delay: 0.2 }}
           className="flex gap-4 mb-8"
         >
-          <div className="flex-1 bg-red/[0.08] border border-red/20 rounded-md p-5 text-center">
+          <div className="flex-1 bg-red/[0.08] border border-red/20 rounded-md p-10 text-center">
             <div className="font-mono text-[20px] uppercase tracking-[0.15em] text-red font-bold mb-3">AES Alliance</div>
             <div className="font-serif text-2xl text-white/70 mb-2">Mali · Burkina · Niger</div>
             <div className="font-mono text-[20px] text-white/80">Withdrew from ECOWAS · 2024</div>
           </div>
 
-          <div className="flex items-center shrink-0 px-2">
+          <div className="flex items-center shrink-0 px-4">
             <div className="relative">
               <div className="w-10 h-px bg-white/20" />
               <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 text-red/40 text-lg">✕</div>
             </div>
           </div>
 
-          <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-5 text-center">
+          <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-10 text-center">
             <div className="font-mono text-[20px] uppercase tracking-[0.15em] text-white/80 mb-3">ECOWAS Framework</div>
             <div className="font-serif text-2xl text-white/40 mb-2">Coastal States</div>
             <div className="font-mono text-[20px] text-white/50">Intel sharing: severed</div>
@@ -47,7 +47,7 @@ export default function IntelCollapseSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-6 px-7 mb-6"
+          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-12 px-14 mb-6"
         >
           <p className="font-serif text-xl italic text-white/85 leading-relaxed">
             &ldquo;The AES withdrawal <span className="text-amber-lt">crippled the region&apos;s ability to share intelligence</span> on JNIM movements across national borders.&rdquo;
@@ -59,7 +59,7 @@ export default function IntelCollapseSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-red/[0.06] border border-red/15 rounded-md py-4 px-6 mb-8"
+          className="bg-red/[0.06] border border-red/15 rounded-md py-8 px-12 mb-8"
         >
           <div className="font-mono text-[18px] uppercase tracking-[0.12em] text-red font-bold mb-2">G5 Sahel Dissolution</div>
           <p className="text-[16px] text-white/80 leading-relaxed">

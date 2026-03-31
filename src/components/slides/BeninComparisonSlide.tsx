@@ -35,7 +35,7 @@ export default function BeninComparisonSlide() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-lg p-6"
+            className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-lg p-10"
           >
             <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-white/80 mb-3">Benin · Completed Arc</div>
             <div className="flex items-end gap-2 mb-5">
@@ -51,7 +51,7 @@ export default function BeninComparisonSlide() {
                 </div>
               ))}
             </div>
-            <div className="pt-3 border-t border-white/[0.06]">
+            <div className="pt-6 border-t border-white/[0.06]">
               <div className="font-mono text-[18px] uppercase text-white/50 tracking-wider">Outcome: Catastrophic</div>
             </div>
           </motion.div>
@@ -66,7 +66,7 @@ export default function BeninComparisonSlide() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex-1 bg-amber/[0.06] border border-amber/20 border-l-[3px] border-l-amber rounded-r-lg p-6"
+            className="flex-1 bg-amber/[0.06] border border-amber/20 border-l-[3px] border-l-amber rounded-r-lg p-10"
           >
             <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-amber-lt mb-3">Togo · In Progress</div>
             <div className="flex items-end gap-2 mb-5">
@@ -82,7 +82,7 @@ export default function BeninComparisonSlide() {
                 </div>
               ))}
             </div>
-            <div className="pt-3 border-t border-amber/15">
+            <div className="pt-6 border-t border-amber/15">
               <div className="font-mono text-[18px] uppercase text-amber-lt tracking-wider">Trajectory: Faster</div>
             </div>
           </motion.div>
@@ -93,7 +93,7 @@ export default function BeninComparisonSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="text-center py-6 px-6 bg-red/[0.08] border border-red/20 rounded mt-2"
+          className="text-center py-10 px-10 bg-red/[0.08] border border-red/20 rounded mt-2"
         >
           <span className="font-mono text-[22px] tracking-[0.12em] uppercase text-red font-bold">
             If the pattern holds: 2026–2027
