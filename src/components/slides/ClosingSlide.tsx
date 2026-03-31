@@ -40,7 +40,7 @@ export default function ClosingSlide() {
           className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-28 px-32 mb-16 text-left"
         >
           <p className="font-serif text-xl font-normal italic text-white/85 leading-relaxed">
-            &ldquo;The question is not whether JNIM will attempt to consolidate presence in northern Togo — it is whether Togo will have the <span className="text-amber-lt">early warning capability</span> to detect and disrupt that effort before it succeeds.&rdquo;
+            &ldquo;The question is not whether JNIM will attempt to consolidate presence in northern Togo — it is whether Togo will have the <span className="text-amber-lt">early warning capability</span>{' '}to detect and disrupt that effort before it succeeds.&rdquo;
           </p>
         </motion.div>
 
