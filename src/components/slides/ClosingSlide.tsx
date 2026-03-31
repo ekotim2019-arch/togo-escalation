@@ -7,13 +7,13 @@ import { SlideWrapper } from '../SlideWrapper';
 export default function ClosingSlide() {
   return (
     <SlideWrapper showGrid>
-      <div className="relative z-10 text-center max-w-[700px]">
+      <div className="relative z-10 text-center max-w-[900px]">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mb-6"
+          className="mb-10"
         >
           <LogoDark className="w-[100px] h-[68px] mx-auto" />
         </motion.div>
@@ -27,7 +27,7 @@ export default function ClosingSlide() {
           <div className="font-serif text-[28px] tracking-[0.2em] uppercase text-white mb-2">
             Kairos Arc
           </div>
-          <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-amber-lt mb-16">
+          <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-amber-lt mb-20">
             Know before it matters
           </div>
         </motion.div>

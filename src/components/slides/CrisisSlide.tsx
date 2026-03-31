@@ -28,7 +28,7 @@ export default function CrisisSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="font-serif text-[32px] font-light tracking-wide text-white/80 mt-2 mb-4"
+          className="font-serif text-[32px] font-light tracking-wide text-white/80 mt-6 mb-8"
         >
           Casualties
         </motion.div>
@@ -38,7 +38,7 @@ export default function CrisisSlide() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="font-mono text-[22px] tracking-[0.12em] uppercase text-white/80 mb-16"
+          className="font-mono text-[22px] tracking-[0.12em] uppercase text-white/80 mb-20"
         >
           Highest on record
         </motion.div>

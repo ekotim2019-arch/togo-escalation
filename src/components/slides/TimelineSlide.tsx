@@ -48,7 +48,7 @@ export default function TimelineSlide() {
   return (
     <SlideWrapper className="p-8">
       <div className="w-full max-w-5xl">
-        <div className="mb-7">
+        <div className="mb-12">
           <Eyebrow>Operational Tempo</Eyebrow>
           <h2 className="font-serif text-[46px] font-light text-white">
             JNIM Incident <em className="italic text-amber-lt">Timeline</em>
@@ -62,7 +62,7 @@ export default function TimelineSlide() {
           {/* Vertical line */}
           <div className="absolute left-[100px] top-0 bottom-0 w-px bg-amber/20" />
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-8">
             {events.map((event, i) => (
               <motion.div
                 key={i}

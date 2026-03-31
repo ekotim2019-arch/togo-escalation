@@ -7,9 +7,9 @@ import { Eyebrow } from '../Eyebrow';
 export default function CallToActionSlide() {
   return (
     <SlideWrapper>
-      <div className="relative z-10 w-full max-w-[700px]">
+      <div className="relative z-10 w-full max-w-3xl">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <Eyebrow>12-Month Outlook</Eyebrow>
           <h2 className="font-serif text-5xl font-light text-white">
             Scenario <em className="italic text-amber-lt">Probabilities</em>
@@ -17,7 +17,7 @@ export default function CallToActionSlide() {
         </div>
 
         {/* Scenarios */}
-        <div className="flex flex-col gap-5 mb-12">
+        <div className="flex flex-col gap-8 mb-16">
           {/* Best Case */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

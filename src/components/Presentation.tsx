@@ -12,6 +12,7 @@ import TimelineSlide from './slides/TimelineSlide'
 import BeninComparisonSlide from './slides/BeninComparisonSlide'
 import IntelCollapseSlide from './slides/IntelCollapseSlide'
 import KairosArcDifferenceSlide from './slides/KairosArcDifferenceSlide'
+import LeadTimeSlide from './slides/LeadTimeSlide'
 import EarlyWarningSlide from './slides/EarlyWarningSlide'
 import RequirementsSlide from './slides/RequirementsSlide'
 import EngagementSlide from './slides/EngagementSlide'
@@ -27,6 +28,7 @@ const slides = [
   BeninComparisonSlide,
   IntelCollapseSlide,
   KairosArcDifferenceSlide,
+  LeadTimeSlide,
   EarlyWarningSlide,
   RequirementsSlide,
   EngagementSlide,

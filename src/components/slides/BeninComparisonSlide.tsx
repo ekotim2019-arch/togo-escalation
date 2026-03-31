@@ -21,15 +21,15 @@ const togoSteps = [
 export default function BeninComparisonSlide() {
   return (
     <SlideWrapper>
-      <div className="relative z-10 w-full max-w-[780px]">
-        <div className="text-center mb-10">
+      <div className="relative z-10 w-full max-w-5xl">
+        <div className="text-center mb-16">
           <Eyebrow color="red">Regional Pattern Analysis</Eyebrow>
           <h2 className="font-serif text-5xl font-light text-white">
             The Benin <em className="italic text-amber-lt">Precedent</em>
           </h2>
         </div>
 
-        <div className="flex gap-5 mb-8">
+        <div className="flex gap-8 mb-12">
           {/* Benin card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -38,11 +38,11 @@ export default function BeninComparisonSlide() {
             className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-lg p-10"
           >
             <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-white/80 mb-3">Benin · Completed Arc</div>
-            <div className="flex items-end gap-2 mb-5">
+            <div className="flex items-end gap-2 mb-8">
               <div className="font-serif text-[52px] font-light text-white/45 leading-none">6</div>
               <div className="font-mono text-[22px] uppercase text-white/50 mb-2 tracking-wide">years</div>
             </div>
-            <div className="space-y-4 mb-5">
+            <div className="space-y-6 mb-8">
               {beninSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="font-mono text-[18px] text-white/60 w-14">{step.year}</div>
@@ -69,11 +69,11 @@ export default function BeninComparisonSlide() {
             className="flex-1 bg-amber/[0.06] border border-amber/20 border-l-[3px] border-l-amber rounded-r-lg p-10"
           >
             <div className="font-mono text-[20px] tracking-[0.15em] uppercase text-amber-lt mb-3">Togo · In Progress</div>
-            <div className="flex items-end gap-2 mb-5">
+            <div className="flex items-end gap-2 mb-8">
               <div className="font-serif text-[52px] font-light text-amber leading-none">?</div>
               <div className="font-mono text-[22px] uppercase text-amber mb-2 tracking-wide">years</div>
             </div>
-            <div className="space-y-4 mb-5">
+            <div className="space-y-6 mb-8">
               {togoSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className={`font-mono text-[18px] w-14 ${step.done ? 'text-amber-lt' : 'text-amber/40'}`}>{step.year}</div>

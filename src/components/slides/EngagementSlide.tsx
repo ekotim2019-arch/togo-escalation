@@ -31,8 +31,8 @@ const tiers = [
 export default function EngagementSlide() {
   return (
     <SlideWrapper className="p-8">
-      <div className="w-full max-w-4xl">
-        <div className="mb-8">
+      <div className="w-full max-w-5xl">
+        <div className="mb-12">
           <Eyebrow>Engagement Model</Eyebrow>
           <h2 className="font-serif text-[46px] font-light text-white">
             Alert <em className="italic text-amber-lt">Tiering</em>
@@ -42,7 +42,7 @@ export default function EngagementSlide() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-8">
           {tiers.map((tier, i) => {
             const isRed = tier.color === 'red';
             const isAmber = tier.color === 'amber';

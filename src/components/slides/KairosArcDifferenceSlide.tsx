@@ -8,7 +8,7 @@ const rows = [
   { label: 'Approach', conventional: 'Reactive monitoring', kairos: 'Predictive signal detection' },
   { label: 'Timeline', conventional: 'Reports what happened', kairos: 'Detects signals before events' },
   { label: 'Coverage', conventional: 'Media & official sources', kairos: 'Human terrain, markets, displacement' },
-  { label: 'Lead Time', conventional: '17 days average', kairos: '420 days demonstrated', highlight: true },
+  { label: 'Lead Time', conventional: '3–5 days average', kairos: '45–90 days demonstrated', highlight: true },
   { label: 'Output', conventional: 'Situation reports', kairos: 'Tripwire alerts + decision briefs' },
   { label: 'Intel network', conventional: 'Dependent on state networks', kairos: 'Independent collection platform' },
 ];
@@ -19,7 +19,7 @@ export default function KairosArcDifferenceSlide() {
   return (
     <SlideWrapper className="p-8">
       <div className="w-full max-w-5xl">
-        <div className="mb-7">
+        <div className="mb-12">
           <Eyebrow>Methodology</Eyebrow>
           <h2 className="font-serif text-[46px] font-light text-white">
             The Kairos Arc <em className="italic text-amber-lt">Difference</em>
@@ -31,7 +31,7 @@ export default function KairosArcDifferenceSlide() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex items-center gap-2 mb-7"
+          className="flex items-center gap-2 mb-12"
         >
           {pipeline.map((step, i) => (
             <div key={i} className="flex items-center gap-2 shrink-0">

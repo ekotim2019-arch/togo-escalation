@@ -35,14 +35,14 @@ export default function RequirementsSlide() {
   return (
     <SlideWrapper className="p-8">
       <div className="w-full max-w-5xl">
-        <div className="mb-8">
+        <div className="mb-12">
           <Eyebrow>Capability Match</Eyebrow>
           <h2 className="font-serif text-[46px] font-light text-white">
             Meeting Your <em className="italic text-amber-lt">Six Requirements</em>
           </h2>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           {requirements.map((item, i) => (
             <motion.div
               key={i}

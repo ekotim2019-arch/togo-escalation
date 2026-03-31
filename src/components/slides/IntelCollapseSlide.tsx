@@ -7,8 +7,8 @@ import { Eyebrow } from '../Eyebrow';
 export default function IntelCollapseSlide() {
   return (
     <SlideWrapper>
-      <div className="relative z-10 w-full max-w-[740px]">
-        <div className="text-center mb-10">
+      <div className="relative z-10 w-full max-w-4xl">
+        <div className="text-center mb-16">
           <Eyebrow color="red">Intelligence Environment</Eyebrow>
           <h2 className="font-serif text-5xl font-light text-white">
             The Intelligence <em className="italic text-amber-lt">Collapse</em>
@@ -20,7 +20,7 @@ export default function IntelCollapseSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex gap-4 mb-8"
+          className="flex gap-6 mb-12"
         >
           <div className="flex-1 bg-red/[0.08] border border-red/20 rounded-md p-10 text-center">
             <div className="font-mono text-[20px] uppercase tracking-[0.15em] text-red font-bold mb-3">AES Alliance</div>
@@ -47,7 +47,7 @@ export default function IntelCollapseSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-12 px-14 mb-6"
+          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-12 px-14 mb-10"
         >
           <p className="font-serif text-xl italic text-white/85 leading-relaxed">
             &ldquo;The AES withdrawal <span className="text-amber-lt">crippled the region&apos;s ability to share intelligence</span> on JNIM movements across national borders.&rdquo;
@@ -59,7 +59,7 @@ export default function IntelCollapseSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-red/[0.06] border border-red/15 rounded-md py-8 px-12 mb-8"
+          className="bg-red/[0.06] border border-red/15 rounded-md py-8 px-12 mb-12"
         >
           <div className="font-mono text-[18px] uppercase tracking-[0.12em] text-red font-bold mb-2">G5 Sahel Dissolution</div>
           <p className="text-[16px] text-white/80 leading-relaxed">

@@ -19,7 +19,7 @@ export default function TensionScoreSlide() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif font-light leading-none tracking-tight text-white"
-          style={{ fontSize: '180px', paddingBottom: '32px' }}
+          style={{ fontSize: '180px', paddingBottom: '56px' }}
         >
           7.5<span className="font-serif font-light text-white/30" style={{ fontSize: '80px' }}>/10</span>
         </motion.div>
@@ -29,7 +29,7 @@ export default function TensionScoreSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="font-mono text-[26px] tracking-[0.2em] uppercase text-amber-lt mb-10"
+          className="font-mono text-[26px] tracking-[0.2em] uppercase text-amber-lt mb-14"
         >
           Tension Score
         </motion.div>
@@ -39,7 +39,7 @@ export default function TensionScoreSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="inline-flex items-center gap-3 px-12 py-6 bg-red/[0.10] border border-red/30 rounded mb-12"
+          className="inline-flex items-center gap-3 px-12 py-6 bg-red/[0.10] border border-red/30 rounded mb-20"
         >
           <div className="w-2 h-2 bg-red rounded-full animate-pulse-slow" />
           <span className="font-mono text-[22px] tracking-[0.15em] uppercase text-red font-bold">

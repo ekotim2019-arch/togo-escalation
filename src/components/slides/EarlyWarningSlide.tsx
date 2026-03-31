@@ -32,7 +32,7 @@ export default function EarlyWarningSlide() {
   return (
     <SlideWrapper className="p-8">
       <div className="w-full max-w-5xl">
-        <div className="mb-8">
+        <div className="mb-14">
           <Eyebrow>Methodology</Eyebrow>
           <h2 className="font-serif text-[46px] font-light text-white">
             Early Warning <em className="italic text-amber-lt">Framework</em>

@@ -18,9 +18,10 @@ export default function LeadTimeSlide() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="font-serif text-[200px] font-light leading-[0.85] tracking-tight text-white mt-6 mb-4"
+          className="font-serif font-light leading-none tracking-tight text-white mt-8"
+          style={{ fontSize: '160px', paddingBottom: '24px' }}
         >
-          420
+          45–90
         </motion.div>
 
         {/* DAYS label */}
@@ -30,7 +31,7 @@ export default function LeadTimeSlide() {
           transition={{ delay: 0.4 }}
           className="font-serif text-5xl font-light tracking-[0.2em] uppercase text-amber mt-4 mb-16"
         >
-          Days
+          Day Lead Time
         </motion.div>
 
         {/* Comparison line */}
@@ -38,15 +39,15 @@ export default function LeadTimeSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="inline-flex items-center gap-6 py-4 px-8 bg-white/[0.03] border border-amber/15 rounded mb-12"
+          className="inline-flex items-center gap-10 py-8 px-16 bg-white/[0.03] border border-amber/15 rounded mb-16"
         >
           <div className="text-right">
-            <div className="font-serif text-4xl font-light text-white">420</div>
+            <div className="font-serif text-4xl font-light text-white">45–90</div>
             <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-amber-lt">Kairos Arc</div>
           </div>
           <div className="font-mono text-[22px] text-white/60">vs</div>
           <div className="text-left">
-            <div className="font-serif text-4xl font-light text-white/35">17</div>
+            <div className="font-serif text-4xl font-light text-white/35">3–5</div>
             <div className="font-mono text-[18px] tracking-[0.1em] uppercase text-white/50">Conventional</div>
           </div>
         </motion.div>

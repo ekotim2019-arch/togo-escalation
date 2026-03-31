@@ -8,7 +8,7 @@ export default function DiapagaMapSlide() {
     <SlideWrapper className="p-8">
       <div className="w-full max-w-6xl">
         {/* Header */}
-        <div className="mb-5">
+        <div className="mb-8">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-6 h-px bg-amber" />
             <span className="font-mono text-[20px] tracking-[0.18em] uppercase text-amber-lt">

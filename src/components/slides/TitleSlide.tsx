@@ -12,13 +12,13 @@ export default function TitleSlide() {
         <LogoDark className="w-[400px] h-[270px]" />
       </div>
 
-      <div className="relative z-10 max-w-[800px] w-full">
+      <div className="relative z-10 max-w-[1100px] w-full">
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex items-center gap-3 mb-12"
+          className="flex items-center gap-3 mb-20"
         >
           <div className="w-8 h-px bg-amber" />
           <span className="font-mono text-[20px] tracking-[0.18em] uppercase text-amber-lt">
@@ -31,7 +31,7 @@ export default function TitleSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="flex items-center gap-5 mb-14"
+          className="flex items-center gap-5 mb-20"
         >
           <LogoDark className="w-16 h-11" />
           <div>
@@ -49,7 +49,7 @@ export default function TitleSlide() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="font-serif text-[72px] font-light leading-[1.05] tracking-tight text-white mb-4"
+          className="font-serif text-[72px] font-light leading-[1.05] tracking-tight text-white mb-10"
         >
           JNIM Threat<br/>
           <em className="italic text-amber-lt">Environment</em>
@@ -60,7 +60,7 @@ export default function TitleSlide() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="font-serif text-[28px] font-light italic text-white/60 mb-16"
+          className="font-serif text-[28px] font-light italic text-white/60 mb-24"
         >
           Togo–Burkina Faso Border Corridor
         </motion.p>
