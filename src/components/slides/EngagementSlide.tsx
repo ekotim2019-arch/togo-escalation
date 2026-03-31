@@ -53,7 +53,7 @@ export default function EngagementSlide() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 + i * 0.15 }}
-                className={`flex items-start gap-6 p-20 border border-l-[3px] rounded-r-lg ${
+                className={`flex items-start gap-6 p-8 border border-l-[3px] rounded-r-lg ${
                   isRed
                     ? 'bg-red/[0.06] border-red/20 border-l-red'
                     : isAmber

@@ -29,7 +29,7 @@ export default function CallToActionSlide() {
               <div className="font-serif text-[42px] font-light text-white/35 leading-none">15</div>
               <div className="font-mono text-[20px] text-white/50">%</div>
             </div>
-            <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-20">
+            <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-8">
               <div className="font-mono text-[20px] tracking-[0.1em] uppercase text-white/80 mb-2">Best Case</div>
               <div className="font-serif text-xl text-white/70 leading-relaxed">
                 JNIM fractures under internal pressure. Regional stabilisation holds. Togo border remains contested but manageable.
@@ -81,7 +81,7 @@ export default function CallToActionSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="text-center pt-32 border-t border-amber/15"
+          className="text-center pt-12 border-t border-amber/15"
         >
           <p className="font-serif text-[22px] font-light italic text-white/60 max-w-[500px] mx-auto">
             &ldquo;The window for effective intervention is narrowing.&rdquo;
