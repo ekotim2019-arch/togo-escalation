@@ -38,7 +38,7 @@ export default function TacticalEvolutionSlide() {
     <div className="w-full h-full flex flex-col bg-gradient-to-b from-slate via-slate to-ink">
       {/* Header */}
       <motion.div
-        className="px-16 pt-10 pb-6 shrink-0"
+        className="px-32 pt-20 pb-12 shrink-0"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -48,13 +48,13 @@ export default function TacticalEvolutionSlide() {
         <div className="accent-line mt-3" />
       </motion.div>
 
-      <div className="flex-1 flex flex-col px-16 pb-12 gap-6 min-h-0">
+      <div className="flex-1 flex flex-col px-32 pb-24 gap-6 min-h-0">
         {/* Evolution stages */}
         <div className="flex gap-6 flex-1">
           {stages.map((stage, i) => (
             <motion.div
               key={stage.phase}
-              className={`flex-1 rounded-2xl p-7 border relative overflow-hidden ${
+              className={`flex-1 rounded-2xl p-14 border relative overflow-hidden ${
                 stage.highlight
                   ? 'bg-threat-critical/10 border-threat-critical/50'
                   : 'bg-white/[0.03] border-white/10'
@@ -74,7 +74,7 @@ export default function TacticalEvolutionSlide() {
               <p className="text-paper/70 text-sm leading-relaxed mb-5">{stage.description}</p>
 
               <div
-                className="inline-flex items-center gap-2 text-xs font-black tracking-widest px-3 py-1.5 rounded-full"
+                className="inline-flex items-center gap-2 text-xs font-black tracking-widest px-6 py-3 rounded-full"
                 style={{ color: stage.color, backgroundColor: `${stage.color}18`, border: `1px solid ${stage.color}40` }}
               >
                 <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: stage.color }} />
@@ -82,7 +82,7 @@ export default function TacticalEvolutionSlide() {
               </div>
 
               {stage.highlight && (
-                <div className="mt-5 bg-threat-critical/10 rounded-xl p-3 border border-threat-critical/20">
+                <div className="mt-5 bg-threat-critical/10 rounded-xl p-6 border border-threat-critical/20">
                   <div className="text-threat-critical text-xs font-black tracking-widest mb-1">APR 2025 — CONFIRMED</div>
                   <div className="text-paper/80 text-xs">
                     Kamikaze drone strike — first documented use by JNIM in West Africa coastal region

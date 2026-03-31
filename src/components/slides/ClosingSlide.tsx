@@ -37,7 +37,7 @@ export default function ClosingSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-14 px-16 mb-16 text-left"
+          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-28 px-32 mb-16 text-left"
         >
           <p className="font-serif text-xl font-normal italic text-white/85 leading-relaxed">
             &ldquo;The question is not whether JNIM will attempt to consolidate presence in northern Togo — it is whether Togo will have the <span className="text-amber-lt">early warning capability</span> to detect and disrupt that effort before it succeeds.&rdquo;
@@ -59,7 +59,7 @@ export default function ClosingSlide() {
       </div>
 
       {/* Bottom classification bar */}
-      <div className="absolute bottom-0 left-0 right-0 px-12 py-6 flex justify-between border-t border-amber/10 font-mono text-[18px] tracking-[0.1em] uppercase text-white/50">
+      <div className="absolute bottom-0 left-0 right-0 px-24 py-12 flex justify-between border-t border-amber/10 font-mono text-[18px] tracking-[0.1em] uppercase text-white/50">
         <span>Client Confidential</span>
         <span>KA-2026-03-001</span>
         <span>31 March 2026</span>

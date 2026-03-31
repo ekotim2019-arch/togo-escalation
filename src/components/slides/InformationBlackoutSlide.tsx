@@ -21,7 +21,7 @@ export default function InformationBlackoutSlide() {
 
       {/* Header */}
       <motion.div
-        className="px-16 pt-10 pb-4 shrink-0 relative z-10"
+        className="px-32 pt-20 pb-8 shrink-0 relative z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -31,16 +31,16 @@ export default function InformationBlackoutSlide() {
         <div className="accent-line mt-3" />
       </motion.div>
 
-      <div className="flex-1 flex flex-col gap-5 px-16 pb-12 relative z-10">
+      <div className="flex-1 flex flex-col gap-5 px-32 pb-24 relative z-10">
         {/* HAAC quote */}
         <motion.div
-          className="bg-ink border border-threat-critical/40 rounded-2xl p-6 relative"
+          className="bg-ink border border-threat-critical/40 rounded-2xl p-12 relative"
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
           <div className="text-threat-critical text-xs font-black tracking-widest mb-3 uppercase">Official Media Suppression — HAAC Directive</div>
-          <blockquote className="text-xl md:text-2xl text-paper font-light italic leading-relaxed border-l-4 border-threat-critical pl-6">
+          <blockquote className="text-xl md:text-2xl text-paper font-light italic leading-relaxed border-l-4 border-threat-critical pl-12">
             &ldquo;HAAC has expressly forbidden journalists from mentioning attacks or security incidents in northern Togo.&rdquo;
           </blockquote>
           <div className="mt-3 text-ash text-sm">
@@ -63,7 +63,7 @@ export default function InformationBlackoutSlide() {
               {gaps.map((gap, i) => (
                 <motion.div
                   key={i}
-                  className="flex items-start gap-3 bg-threat-critical/5 border border-threat-critical/15 rounded-xl px-4 py-3"
+                  className="flex items-start gap-3 bg-threat-critical/5 border border-threat-critical/15 rounded-xl px-8 py-6"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + i * 0.08 }}
@@ -87,7 +87,7 @@ export default function InformationBlackoutSlide() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="bg-ink border border-ash/20 rounded-2xl p-5 flex-1">
+            <div className="bg-ink border border-ash/20 rounded-2xl p-10 flex-1">
               <div className="text-ash text-xs font-black tracking-widest uppercase mb-4">Consequence</div>
               <div className="space-y-4 text-sm text-paper/70 leading-relaxed">
                 <p>When an attack occurs, Togolese authorities learn about it from social media — <span className="text-threat-critical font-bold">not from intelligence channels.</span></p>

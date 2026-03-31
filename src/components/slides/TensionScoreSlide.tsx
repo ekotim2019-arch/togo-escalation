@@ -39,7 +39,7 @@ export default function TensionScoreSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="inline-flex items-center gap-3 px-12 py-6 bg-red/[0.10] border border-red/30 rounded mb-20"
+          className="inline-flex items-center gap-3 px-24 py-12 bg-red/[0.10] border border-red/30 rounded mb-20"
         >
           <div className="w-2 h-2 bg-red rounded-full animate-pulse-slow" />
           <span className="font-mono text-[22px] tracking-[0.15em] uppercase text-red font-bold">

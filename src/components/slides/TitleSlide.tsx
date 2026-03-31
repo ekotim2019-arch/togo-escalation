@@ -70,7 +70,7 @@ export default function TitleSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="flex gap-12 pt-16 border-t border-amber/20"
+          className="flex gap-12 pt-32 border-t border-amber/20"
         >
           <div>
             <div className="font-mono text-[18px] tracking-[0.12em] uppercase text-amber mb-1">Classification</div>

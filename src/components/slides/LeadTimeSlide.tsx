@@ -39,7 +39,7 @@ export default function LeadTimeSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="inline-flex items-center gap-10 py-8 px-16 bg-white/[0.03] border border-amber/15 rounded mb-16"
+          className="inline-flex items-center gap-10 py-16 px-32 bg-white/[0.03] border border-amber/15 rounded mb-16"
         >
           <div className="text-right">
             <div className="font-serif text-4xl font-light text-white">45–90</div>

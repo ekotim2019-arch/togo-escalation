@@ -22,7 +22,7 @@ export default function IntelCollapseSlide() {
           transition={{ delay: 0.2 }}
           className="flex gap-6 mb-12"
         >
-          <div className="flex-1 bg-red/[0.08] border border-red/20 rounded-md p-10 text-center">
+          <div className="flex-1 bg-red/[0.08] border border-red/20 rounded-md p-20 text-center">
             <div className="font-mono text-[20px] uppercase tracking-[0.15em] text-red font-bold mb-3">AES Alliance</div>
             <div className="font-serif text-2xl text-white/70 mb-2">Mali · Burkina · Niger</div>
             <div className="font-mono text-[20px] text-white/80">Withdrew from ECOWAS · 2024</div>
@@ -35,7 +35,7 @@ export default function IntelCollapseSlide() {
             </div>
           </div>
 
-          <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-10 text-center">
+          <div className="flex-1 bg-white/[0.03] border border-white/[0.08] rounded-md p-20 text-center">
             <div className="font-mono text-[20px] uppercase tracking-[0.15em] text-white/80 mb-3">ECOWAS Framework</div>
             <div className="font-serif text-2xl text-white/40 mb-2">Coastal States</div>
             <div className="font-mono text-[20px] text-white/50">Intel sharing: severed</div>
@@ -47,7 +47,7 @@ export default function IntelCollapseSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-12 px-14 mb-10"
+          className="bg-white/[0.02] border-l-[3px] border-amber rounded-r-md py-24 px-28 mb-10"
         >
           <p className="font-serif text-xl italic text-white/85 leading-relaxed">
             &ldquo;The AES withdrawal <span className="text-amber-lt">crippled the region&apos;s ability to share intelligence</span> on JNIM movements across national borders.&rdquo;
@@ -59,7 +59,7 @@ export default function IntelCollapseSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-red/[0.06] border border-red/15 rounded-md py-8 px-12 mb-12"
+          className="bg-red/[0.06] border border-red/15 rounded-md py-16 px-24 mb-12"
         >
           <div className="font-mono text-[18px] uppercase tracking-[0.12em] text-red font-bold mb-2">G5 Sahel Dissolution</div>
           <p className="text-[16px] text-white/80 leading-relaxed">

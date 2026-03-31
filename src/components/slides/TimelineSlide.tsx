@@ -87,7 +87,7 @@ export default function TimelineSlide() {
                 </div>
 
                 {/* Content */}
-                <div className={`flex-1 py-6 px-8 rounded-r ${
+                <div className={`flex-1 py-12 px-16 rounded-r ${
                   event.highlight
                     ? 'bg-red/[0.08] border-l-[3px] border-red'
                     : event.severity === 'critical'

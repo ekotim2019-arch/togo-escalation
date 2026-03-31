@@ -49,7 +49,7 @@ export default function EarlyWarningSlide() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + i * 0.1 }}
-              className={`flex flex-col p-16 rounded-lg border ${
+              className={`flex flex-col p-20 rounded-lg border ${
                 ind.color === 'red'
                   ? 'bg-red/[0.06] border-red/20 border-l-[3px] border-l-red rounded-l-none'
                   : 'bg-amber/[0.05] border-amber/15'
@@ -74,7 +74,7 @@ export default function EarlyWarningSlide() {
               </p>
 
               {/* Examples */}
-              <div className="space-y-3 pt-8 border-t border-white/[0.06]">
+              <div className="space-y-3 pt-16 border-t border-white/[0.06]">
                 {ind.examples.map((ex, j) => (
                   <div key={j} className="flex items-center gap-2">
                     <div className={`w-1 h-1 rounded-full ${ind.color === 'red' ? 'bg-red/50' : 'bg-amber/50'}`} />
